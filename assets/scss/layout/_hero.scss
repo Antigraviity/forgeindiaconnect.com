@@ -1,0 +1,398 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Hero CSS
+----------------------------------------*/
+
+.hero-section{
+    background-color: var(--cp-color-bg-1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .bg-pattern{
+        height: 50%;
+    }
+}
+
+.hero-container{
+    max-width: 1545px;
+}
+
+.hero-content{
+    padding-top: 220px;
+    padding-bottom: 90px;
+    @include flex-vertical-center;
+    @include breakpoint(md){
+        padding-top: 100px;
+    }
+    @include breakpoint(sm){
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @include breakpoint(lg){
+        align-items: start;
+    }
+    .hero-right-content{
+        @include flex-vertical-center;
+        justify-content: space-between;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        width: 100%;
+        .title{
+            color: var(--cp-color-common-white);
+            font-size: 120px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1;
+            @include breakpoint(xxl){
+                font-size: 120px;
+            }
+            @include breakpoint(xl){
+                font-size: 90px;
+            }
+            @include breakpoint(lg){
+                font-size: 80px;
+            }
+            @include breakpoint(md){
+                font-size: 70px;
+            }
+            @include breakpoint(sm){
+                font-size: 42px;
+                line-height: 1.2;
+            }
+            span{
+                font-family: "NewYork", sans-serif;
+                font-weight: 400;
+                display: block;
+            }
+        }
+        .hero-client-wrap{
+            max-width: 450px;
+            width: 100%;
+            .hero-author-list{
+                @include flex-vertical-center;
+                li{
+                    height: 56px;
+                    width: 56px;
+                    @include flex-center;
+                    border-radius: 50%;
+                    border: 3px solid var(--cp-color-common-white);
+                    &:not(:first-of-type){
+                        margin-left: -20px;
+                    }
+                    &.icon{
+                        background-color: var(--cp-color-theme-primary);
+                        i{
+                            color: var(--cp-color-heading-primary);
+                        }
+                    }
+                }
+            }
+            .desc{
+                font-family: var(--cp-ff-heading);
+                color: var(--cp-color-common-white);
+                font-size: 18px;
+                font-weight: 500;
+                margin-top: 20px;
+                line-height: 1.6;
+            }
+            .hero-desc{
+                color: var(--cp-color-common-white);
+                font-family: 'Euclid Circular B';
+                margin-bottom: 45px;
+                padding-bottom: 45px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+.hero-video-box{
+    margin-bottom: 0;
+    transform: translateY(8px);
+    .video-area{
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
+// Hero 2
+
+.hero-2{
+    background-color: var(--cp-color-bg-1);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content-2{
+    text-align: center;
+    padding: 200px 0 120px 0;
+    @include breakpoint(md){
+        padding: 90px 0 100px 0;
+    }
+    @include breakpoint(md){
+        padding: 70px 0 70px 0;
+    }
+    .title{
+        font-size: 159px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 5;
+        @include breakpoint(xxl){
+            font-size: 130px;
+        }
+        @include breakpoint(xl){
+            font-size: 120px;
+        }
+        @include breakpoint(lg){
+            font-size: 100px;
+        }
+        @include breakpoint(md){
+            font-size: 70px;
+        }
+        @include breakpoint(sm){
+            font-size: 40px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            br{
+                display: block;
+            }
+        }
+        span{
+            font-family: "NewYork", sans-serif;
+            font-weight: 400;
+        }
+    }
+    .hero-content-inner{
+        @include flex-vertical-center;
+        column-gap: 120px;
+        max-width: 1320px;
+        width: 100%;
+        margin: 0 auto;
+        @include breakpoint(md){
+            flex-wrap: wrap;
+            row-gap: 30px;
+        }
+        .hero-counter{
+            @include breakpoint(sm){
+                text-align: center;
+            }
+            .hero-desc{
+                max-width: 273px; 
+                width: 100%;
+                font-size: 20px;
+                font-weight: 400;
+                text-align: left;
+                margin-bottom: 140px;
+                @include breakpoint(md){
+                    margin-bottom: 30px;
+                }
+                @include breakpoint(sm){
+                    max-width: 100%;
+                    font-size: 16px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+            .hero-counter-item{
+                text-align: left;
+                @include breakpoint(sm){
+                    text-align: center;
+                }
+                .counter-title{
+                    font-family: "NewYork", sans-serif;
+                    font-size: 90px;
+                    font-weight: 400;
+                    line-height: 1;
+                    margin-left: -15px;
+                    margin-bottom: 0;
+                    .odometer-auto-theme{
+                        font-family: inherit;
+                        line-height: 1;
+                    }
+                }
+                p{
+                    font-family: var(--cp-ff-heading);
+                    font-size: 24px;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .hero-img-wrap{
+            @include flex-vertical-center;
+            column-gap: 60px;
+            @include breakpoint(sm){
+                flex-direction: column;
+                row-gap: 30px;
+            }
+            .hero-img{
+                max-width: 720px;
+                width: 100%;
+                height: 458px;
+                @include breakpoint(sm){
+                    height: 350px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;   
+                    object-fit: cover
+                }
+            }
+        }
+    }
+    .hero-btn-wrap{
+        @include flex-vertical-center;
+        justify-content: space-between;
+        @include breakpoint(sm){
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        .hero-btn{
+            background-color: var(--cp-color-theme-primary);
+            height: 150px;
+            width: 150px;
+            @include flex-center;
+            border-radius: 50%;
+            position: relative;
+            z-index: 5;
+            i{
+                color: var(--cp-color-text-black);
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            .explore-text{
+                animation-name: spin;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// Hero 3
+
+.hero-section-3{
+    position: relative;
+    z-index: 1;
+    .bg-img{
+        @include background;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    .overlay{
+        background: linear-gradient(180deg, rgba(0, 46, 79, 0.1) 0%, rgba(0, 46, 79, 0.7) 100%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.hero-content-3{
+    padding-top: 650px;
+    padding-bottom: 90px;
+    position: relative;
+    @include breakpoint(md){
+        padding-top: 450px;
+    }
+    @include breakpoint(sm){
+        padding-top: 250px;
+        padding-bottom: 50px;
+    }
+    .title{
+        color: var(--cp-color-common-white);
+        font-size: 150px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 1;
+        span{
+            color: var(--cp-color-theme-primary);
+            display: block;
+            font-size: 80px;
+            @include breakpoint(lg){
+                font-size: 70px;
+            }
+            @include breakpoint(md){
+                font-size: 50px;
+            }
+            @include breakpoint(sm){
+                font-size: 30px;
+            }
+        }
+        @include breakpoint(xxl){
+            font-size: 130px;
+        }
+        @include breakpoint(xl){
+            font-size: 110px;
+        }
+        @include breakpoint(lg){
+            font-size: 90px;
+        }
+        @include breakpoint(md){
+            font-size: 70px;
+        }
+        @include breakpoint(sm){
+            font-size: 50px;
+        }
+    }
+    .hero-btn-wrap{
+        position: absolute;
+        bottom: 35%;
+        right: 80px;
+        z-index: 5;
+        @include breakpoint(sm){
+            display: none;
+        }
+        .hero-btn{
+            background-color: var(--cp-color-theme-primary);
+            height: 150px;
+            width: 150px;
+            @include flex-center;
+            border-radius: 50%;
+            i{
+                color: var(--cp-color-text-black);
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            .explore-text{
+                animation-name: spin;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+        }
+    }
+}
+
+/* !END: Hero CSS */

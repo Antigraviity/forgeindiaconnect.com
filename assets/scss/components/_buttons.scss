@@ -1,0 +1,91 @@
+@use "../utilities" as *;
+
+/** Buttons CSS */
+
+.cp-primary-btn {
+    background-color: var(--cp-color-theme-primary);
+    font-family: var(--cp-ff-heading);
+    color: var(--cp-color-text-black);
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 21px 35px;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(sm){
+        padding: 20px 30px;
+    }
+    &:before {
+        background-color: var(--cp-color-heading-primary);
+        content: "";
+        width: 100%;
+        height: 0;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+    &:after{
+        display: block;
+        clear: both;
+        content: "";
+    }
+    i{
+        margin-left: 7px;
+        font-size: 12px;
+        transition: all 0.3s ease-in-out;
+        margin-top: 3.5px;
+    }
+    .btn-text{
+        z-index: 1;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        border: none;
+        .btn-text-1{
+            position: relative;
+            display: block;
+            color: var(--cp-color-text-black);
+            transition: all 0.5s;
+        }
+        .btn-text-2{
+            position: absolute;
+            top: 100%;
+            display: block;
+            color: var(--cp-color-heading-primary);
+            transition: all 0.5s;
+        }
+    }
+    &:hover {
+        color: var(--cp-color-text-black);
+        &:before{
+            background-color: var(--cp-color-heading-primary);
+            height: 100%;
+            width: 100%;
+        }
+        .btn-text{
+            .btn-text-1{
+                transform: translateY(-150%);
+            }
+            .btn-text-2{
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--cp-color-common-white);
+            }
+        }
+    }
+    &:focus{
+        color: var(--cp-color-heading-primary);
+    }
+    &.cp-btn-2{
+        border-radius: 100px;
+    }
+}

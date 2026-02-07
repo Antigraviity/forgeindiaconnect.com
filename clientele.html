@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <!-- Site Title -->
+    <title>Clientele | ForgeIndia Connect - Job & Business Consultancy</title>
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.webp">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/carouselTicker.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="preloader-anim">
+                <div class="loading" data-loading-text="Forge India Connect"
+                    style="white-space:nowrap; display:inline-block; max-width:none; font-size:80px; font-weight:700; color:#fff;">
+                </div>
+            </div>
+            <div class="preloader-area area-left"></div>
+            <div class="preloader-area area-right"></div>
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <!-- Preloader -->
+
+
+
+
+    <!-- header-area-start -->
+    <!-- header-area-start -->
+    <style>
+        /* ===== HEADER (mobile + desktop) ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+            /* stacking context parent */
+            isolation: isolate;
+            /* lets ::before sit behind content */
+            transition: background .3s ease;
+        }
+
+        /* Blue bar drawn behind header content (works on iOS/Safari) */
+        .header.scrolled::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #0a5fb3;
+            border-bottom: 3.2px solid rgba(255, 255, 255, .25);
+            pointer-events: none;
+            z-index: 0;
+            /* keep behind logo/content */
+        }
+
+        /* make sure header inner elements sit above the ::before layer */
+        .header .primary-header,
+        .header .header-wrap,
+        .header .primary-header-inner,
+        .header .header-logo {
+            position: relative;
+            z-index: 1;
+            background: transparent !important;
+        }
+
+        /* ===== Off-canvas panel (unchanged) ===== */
+        .sidebar-area,
+        .mobile-side-menu,
+        .offcanvas,
+        .offcanvas-area {
+            position: fixed !important;
+            top: 0;
+            right: 0;
+            width: 380px;
+            max-width: 90vw;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -8px 0 24px rgba(0, 0, 0, .15);
+            z-index: 10000 !important;
+            /* > header */
+            transform: translateX(100%);
+            transition: transform .3s ease;
+            overflow-y: auto;
+        }
+
+        .is-open.sidebar-area,
+        .is-open.mobile-side-menu,
+        .is-open.offcanvas,
+        .is-open.offcanvas-area {
+            transform: translateX(0);
+        }
+
+        /* Backdrop */
+        .body-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+            z-index: 9995;
+            /* below panel, above page */
+            display: none;
+            pointer-events: none;
+        }
+
+        .body-overlay.active {
+            display: block;
+            pointer-events: auto;
+        }
+    </style>
+    <style>
+        /* Base: smooth color change */
+        .mobile-side-menu .side-menu-content a,
+        .mobile-side-menu .side-menu-content i,
+        .mobile-side-menu .side-menu-content p {
+            transition: color .2s ease;
+        }
+
+        /* Links in the menu + contact list + social icons */
+        .mobile-side-menu .side-menu-wrap a:hover,
+        .mobile-side-menu .side-menu-list a:hover,
+        .mobile-side-menu .side-menu-social a:hover,
+        .mobile-side-menu .side-menu-social a:hover i {
+            color: #fed201 !important;
+            text-decoration: none;
+        }
+
+        /* Make the whole contact row turn yellow on hover (text + icon) */
+        .mobile-side-menu .side-menu-list li:hover i,
+        .mobile-side-menu .side-menu-list li:hover p,
+        .mobile-side-menu .side-menu-list li:hover a {
+            color: #fed201 !important;
+        }
+
+        /* Accessibility: keyboard focus states */
+        .mobile-side-menu .side-menu-content a:focus-visible {
+            outline: 2px solid #fed201;
+            outline-offset: 2px;
+        }
+    </style>
+
+    <header class="header" style="position:fixed; top:0; left:0; width:100%; background:transparent;">
+        <div class="primary-header">
+            <div class="header-wrap">
+                <div class="primary-header-inner">
+
+                    <!-- Logo -->
+                    <div class="header-logo d-lg-block">
+                        <a href="./">
+                            <img id="site-logo" src="assets/img/logo/forgeindia_l1.webp"
+                                data-top="assets/img/logo/forgeindia_l1.webp"
+                                data-scrolled="assets/img/logo/forgeindia_white_l1.webp" alt="Forge India"
+                                style="height:70px; display:block;">
+                        </a>
+                    </div>
+
+
+
+                    <!-- Menu -->
+                    <div class="header-menu-wrap">
+                        <div class="mobile-menu-items">
+                            <ul>
+                                <li><a href="./">Home</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="services.html">Services</a>
+                                    <ul>
+                                        <li><a href="job-consulting.html">Job Consulting</a></li>
+                                        <li><a href="insurance-services.html">Insurance Services</a></li>
+                                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                        <li><a href="app-development.html">App Development</a></li>
+                                        <li><a href="website-development.html">Website Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="clientele.html" class="active">Clientele</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.header-menu-wrap -->
+
+                    <!-- Right Side -->
+                    <div class="header-right-wrap">
+                        <div class="header-right">
+                            <div class="header-btn-wrap">
+                                <a href="contact.html" class="cp-primary-btn header-btn cp-btn-2">
+                                    <span class="btn-text">
+                                        <span class="btn-text-1">Let’s Talk</span>
+                                        <span class="btn-text-2">Let’s Talk</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="sidebar-icon">
+                                <button class="sidebar-trigger open" aria-label="Open menu">
+                                    <span></span><span></span><span></span>
+                                </button>
+                            </div>
+
+                            <div class="header-right-item d-lg-none d-md-block">
+                                <a href="javascript:void(0)" class="mobile-side-menu-toggle"
+                                    aria-label="Open mobile menu">
+                                    <img src="assets/img/icon/mobile-menu.png" alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.header-right -->
+                    </div>
+
+                </div><!-- /.primary-header-inner -->
+            </div>
+        </div>
+    </header>
+    <!-- /.Main Header -->
+
+    <!-- Inline Scripts -->
+    <script>
+        /* Logo swap on scroll */
+        (function () {
+            const header = document.querySelector('.header');
+            const logo = document.getElementById('site-logo');
+            const THRESHOLD = 50; // set to 0 if header starts blue
+
+            function updateHeaderState() {
+                if (window.scrollY > THRESHOLD) {
+                    header.classList.add('scrolled');
+                    logo.src = logo.getAttribute('data-light');  // white
+                } else {
+                    header.classList.remove('scrolled');
+                    logo.src = logo.getAttribute('data-dark');   // default
+                }
+            }
+            updateHeaderState();
+            window.addEventListener('scroll', updateHeaderState, { passive: true });
+        })();
+    </script>
+
+    <script>
+        /* Off-canvas open/close with proper scroll lock/unlock */
+        (function () {
+            const openers = [
+                document.querySelector('.sidebar-trigger'),
+                document.querySelector('.mobile-side-menu-toggle')
+            ].filter(Boolean);
+
+            const panel =
+                document.querySelector('.sidebar-area') ||
+                document.querySelector('.mobile-side-menu') ||
+                document.querySelector('.offcanvas') ||
+                document.querySelector('.offcanvas-area');
+
+            if (!panel) return;
+
+            // Ensure a single overlay exists
+            let overlay = document.querySelector('.body-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'body-overlay';
+                document.body.appendChild(overlay);
+            }
+
+            const lockScroll = () => {
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
+                document.body.style.touchAction = 'none';
+            };
+            const unlockScroll = () => {
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+                document.body.style.touchAction = '';
+            };
+
+            const openPanel = (e) => {
+                e && e.preventDefault();
+                panel.classList.add('is-open');
+                overlay.classList.add('active');
+                lockScroll();
+            };
+            const closePanel = (e) => {
+                e && e.preventDefault();
+                panel.classList.remove('is-open');
+                overlay.classList.remove('active');
+                unlockScroll();
+            };
+
+            // Open
+            openers.forEach(btn => btn.addEventListener('click', (e) => {
+                // If already open and trigger is clicked again => close (toggle)
+                if (panel.classList.contains('is-open')) return closePanel(e);
+                openPanel(e);
+            }));
+
+            // Close interactions
+            overlay.addEventListener('click', closePanel);
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(e); });
+
+            // Close buttons inside panel (support multiple class names)
+            panel.addEventListener('click', (e) => {
+                if (e.target.closest('.sidebar-close, .offcanvas-close, .close, [data-offcanvas-close]')) {
+                    closePanel(e);
+                }
+            });
+
+            // Safety: on desktop resize, ensure unlocked
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 992) closePanel();
+            });
+        })();
+    </script>
+
+    <div id="popup-search-box">
+        <div class="box-inner-wrap d-flex align-items-center">
+            <form id="form" action="#" method="get" role="search">
+                <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+            </form>
+            <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+        </div>
+    </div>
+    <!-- /#popup-search-box -->
+
+    <div id="sidebar-area" class="sidebar-area">
+        <button class="sidebar-trigger close">
+            <svg class="sidebar-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7"
+                style="enable-background: new 0 0 16 12.7" xml:space="preserve">
+                <g>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)" width="16"
+                        height="2"></rect>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)" width="16"
+                        height="2"></rect>
+                </g>
+            </svg>
+        </button>
+        <div class="side-menu-content">
+            <div class="side-menu-logo">
+                <a class="dark-img" href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"
+                        style="width: 120px;"></a>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-about">
+                <div class="side-menu-header">
+                    <h3>About Us</h3>
+                </div>
+                <p>At <b>ForgeIndia Connect</b>, we empower careers and businesses with expert <b>Job Consulting</b> and
+                    innovative solutions in <b>Insurance, Digital Marketing, Website, and Mobile App Development.</b>
+                    Our mission is to connect talent, technology, and opportunities to build lasting success.</p>
+                <a href="contact.html" class="cp-primary-btn">
+                    <span class="btn-text">
+                        <span class="btn-text-1">Contact us</span>
+                        <span class="btn-text-2">Contact us</span>
+                    </span>
+                </a>
+            </div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a
+                        href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="linkedin"><a
+                        href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--/.sidebar-area-->
+
+    <div class="mobile-side-menu">
+        <div class="side-menu-content">
+            <div class="side-menu-head">
+                <a href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"></a>
+                <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:agenik@gmail.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a
+                        href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="linkedin"><a
+                        href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.mobile-side-menu -->
+    <div class="mobile-side-menu-overlay"></div>
+
+    <section class="page-header"
+        style="position: relative; width: 100%; min-height: 60vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+
+        <!-- Banner background -->
+        <div class="banner-bg" style="position:absolute; top:0; left:0; width:100%; height:100%;
+              background:url('assets/img/images/clientele-banner.webp') center/cover no-repeat;
+              z-index:0;">
+        </div>
+
+        <!-- Dark overlay -->
+        <div class="banner-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%;
+              background:rgba(6,35,58,0.55); z-index:0;">
+        </div>
+
+        <!-- Content -->
+        <div class="container" style="position:relative; z-index:1; text-align:center; color:#fff;">
+            <div class="page-header-content">
+                <h1 class="title">Our Clientele & Partners</h1>
+                <h4 class="sub-title">
+                    <a class="home" href="./" style="color:#fff; text-decoration:none;">Home</a>
+                    <span class="inner-page" style="color:#ffcc00;">Clientele</span>
+                </h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- ./ page-header -->
+
+    <section class="project-section pt-25 pb-150">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9"
+                    data-stagger="0.03"></h4>
+                <p class="section-title" data-text-animation="fade-in-bottom-line" data-duration="1" data-stagger="0.2">
+                    <br><span>Banking & Finance</span>
+                </p>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/hdfc.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/axis.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/cub.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/au.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/equitas.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/muthoot.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/kotak-mahindra.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-heading text-center">
+                <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9"
+                    data-stagger="0.03"></h4>
+                <p class="section-title" data-text-animation="fade-in-bottom-line" data-duration="1" data-stagger="0.2">
+                    <br><span>IT & Consulting</span>
+                </p>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/techmahindra.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/capgemeni.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/polaris.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/movate.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/kochar.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-heading text-center">
+                <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9"
+                    data-stagger="0.03"></h4>
+                <p class="section-title" data-text-animation="fade-in-bottom-line" data-duration="1" data-stagger="0.2">
+                    <br><span>Automotive & Manufacturing</span>
+                </p>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/hyundai.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/ather.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/delta.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/tata.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/foxconn.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-heading text-center">
+                <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9"
+                    data-stagger="0.03"></h4>
+                <p class="section-title" data-text-animation="fade-in-bottom-line" data-duration="1" data-stagger="0.2">
+                    <br><span>BPO & Customer Experience</span>
+                </p>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/tp.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/mafoi.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <div class="section-heading text-center">
+                <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9"
+                    data-stagger="0.03"></h4>
+                <p class="section-title" data-text-animation="fade-in-bottom-line" data-duration="1" data-stagger="0.2">
+                    <br><span>Insurance & Healthcare</span>
+                </p>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="project-item project-inner">
+                        <div class="project-thumb">
+                            <img src="assets/img/logo/clientele/uhg.webp" alt="project">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ./ project-section -->
+
+    <footer class="footer-section overflow-hidden">
+        <div class="container">
+            <div class="footer-text text-center">
+                <h1 class="footer-header">let's talk <a href="contact.html" class="contact-btn"><i
+                            class="fa-regular fa-arrow-right"></i></a></h1>
+            </div>
+            <div class="row footer-wrap">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <div class="footer-logo">
+                                <a href="./"><img src="assets/img/logo/forgeindia_white_l1.webp" alt="logo"></a>
+                            </div>
+                        </div>
+                        <p class="mb-25">Forgeindia Connect - Shaping Future</p>
+                        <ul class="social-list">
+                            <li class="instagram"><a
+                                    href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="facebook"><a
+                                    href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li class="linkedin"><a
+                                    href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                        class="fab fa-linkedin"></i></a></li>
+                        </ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget footer-col-2">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Services</h3>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="job-consulting.html">Job Consulting</a></li>
+                            <li><a href="insurance-services.html">Insurance Services</a></li>
+                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="website-development.html">Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Address</h3>
+                        </div>
+                        <ul class="address-list">
+                            <li>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</li>
+                            <li><a href="tel:+916369406416">+91 63694-06416</a></li>
+                            <li><a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row copyright-content">
+                    <div class="col-md-6">
+                        <p>© <span id="current-year">2026</span> Forge India Connect Pvt Ltd. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                        <p class="copyright-text"> Developed & Maintained By
+                            <a href="https://www.unntangle.com" class="footer-link" target="_blank"
+                                rel="noopener">Unntangle</a>
+                        </p>
+                    </div>
+
+                    <style>
+                        .footer-link {
+                            color: inherit;
+                            text-decoration: none;
+                            transition: color 0.3s ease, text-decoration 0.3s ease;
+                        }
+
+                        .footer-link:hover {
+                            color: #FFD700;
+                            /* change to your brand color */
+                            text-decoration: underline;
+                        }
+                    </style>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./ footer-section -->
+
+    <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+    <!--scrollup-->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquary-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+    <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/vendor/waypoints.min.js"></script>
+    <script src="assets/js/vendor/venobox.min.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <script src="assets/js/vendor/meanmenu.js"></script>
+    <script src="assets/js/vendor/jquery.isotope.js"></script>
+    <script src="assets/js/vendor/swiper.min.js"></script>
+    <script src="assets/js/vendor/split-type.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/scroll-trigger.min.js"></script>
+    <script src="assets/js/vendor/smooth-scroll.js"></script>
+    <script src="assets/js/vendor/jquery.carouselTicker.js"></script>
+    <script src="assets/js/vendor/nice-select.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            const header = document.querySelector('.header');
+            const logo = document.getElementById('site-logo');
+            if (!header || !logo) return;
+
+            const TOP_SRC = logo.getAttribute('data-top');
+            const SCROLLED_SRC = logo.getAttribute('data-scrolled');
+            const THRESHOLD = 50; // adjust if you want earlier/later switch
+
+            function isStickyNow() {
+                // Consider both explicit scroll and theme's sticky class
+                return window.scrollY > THRESHOLD || header.classList.contains('sticky-active') || header.classList.contains('scrolled');
+            }
+
+            function applyLogo() {
+                logo.src = isStickyNow() ? SCROLLED_SRC : TOP_SRC;
+            }
+
+            // Run on load, scroll, and resize
+            applyLogo();
+            window.addEventListener('scroll', applyLogo, { passive: true });
+            window.addEventListener('resize', applyLogo);
+
+            // Also react if the theme toggles classes later
+            const mo = new MutationObserver(applyLogo);
+            mo.observe(header, { attributes: true, attributeFilter: ['class'] });
+        })();
+    </script>
+
+</body>
+
+</html>

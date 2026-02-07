@@ -1,0 +1,111 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Contact CSS
+----------------------------------------*/
+
+.contact-form{
+    background-color: #F8F5F3;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    padding: 45px;
+    @include breakpoint(sm){
+        padding: 30px 20px;
+    }
+    .contact-form-title{
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .form-item{
+        .form-control{
+            background-color: var(--cp-color-common-white);
+            color: var(--cp-color-heading-primary);
+            border: none;
+            box-shadow: none;
+            padding: 16px 25px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            @include tp-placeholder{
+                color: var(--cp-color-heading-primary);
+            }
+        }
+    }
+    .submit-btn{
+        margin-top: 20px;
+    }
+}
+
+.contact-content{
+    padding-left: 70px;
+    @include breakpoint(lg){
+        padding-left: 30px;
+    }
+    @include breakpoint(md){
+        padding-left: 0;
+        margin-top: 40px;
+    }
+    .section-heading{
+        .section-title{
+            font-size: 46px;
+            font-weight: 600;
+            @include breakpoint(sm){
+                font-size: 28px;
+            }
+        }
+    }
+    p{
+        margin-bottom: 35px;
+    }
+    .contact-list{
+        list-style: none;
+        li{
+            color: var(--cp-color-heading-primary);
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1;
+            &:not(:last-of-type){
+                margin-bottom: 15px;
+            }
+            @include breakpoint(sm){
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.4;
+            }
+            a{
+                color: var(--cp-color-heading-primary);
+            }
+        }
+    }
+    .contact-social-list{
+        margin-top: 45px;
+        li{
+            display: inline-flex;
+            &:not(:last-of-type){
+                margin-right: 8px;
+            }
+            a{
+                color: var(--cp-color-heading-primary);
+                border: 1px solid #D9E4E3;
+                height: 36px;
+                width: 36px;
+                @include flex-center;
+                border-radius: 50%;
+                font-size: 15px;
+                &:hover{
+                    background-color: var(--cp-color-theme-primary);
+                    color: var(--cp-color-heading-primary);
+                }
+            }
+        }
+    }
+}
+
+
+.map-wrapper{
+    iframe{
+        border-radius: 16px;
+    }
+}
+
+/* !END: Theme Contact CSS */

@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <!-- Site Title -->
+    <title>Web Development | ForgeIndia Connect</title>
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.webp">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/carouselTicker.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* ========= Service sidebar: responsive, centered, full-width ========= */
+        /* Stack + center the sidebar for tablets, small desktops, and phones */
+        @media (max-width: 1200px) {
+
+            /* Put sidebar above content and give both columns full width */
+            .service-details .row {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .service-details .col-lg-4,
+            .service-details .col-lg-8 {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            /* Sidebar card must not be narrow */
+            .service-sidebar.sticky-widget {
+                position: static !important;
+            }
+
+            .service-sidebar {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto 24px auto !important;
+                padding: 16px 14px !important;
+                background: #f8f9fb;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+            }
+
+            .service-sidebar .sidebar-title {
+                text-align: center;
+                margin-bottom: 12px;
+            }
+
+            /* The list should fill the card and center itself */
+            .service-sidebar-list {
+                display: grid !important;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+                gap: 12px !important;
+                padding: 0 !important;
+                margin: 0 auto !important;
+                width: 100% !important;
+                list-style: none;
+            }
+
+            .service-sidebar-list li {
+                list-style: none !important;
+            }
+
+            /* Make the links real full-width buttons */
+            .service-sidebar-list li a,
+            .service-sidebar-list li .svc-link {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                min-height: 48px;
+                padding: 12px 16px !important;
+                border-radius: 9999px !important;
+                background: #fff !important;
+                border: 1px solid #e2e6ea !important;
+                color: #003366 !important;
+                font-weight: 700;
+                text-decoration: none !important;
+                box-sizing: border-box !important;
+                transition: background .2s ease, color .2s ease, border-color .2s ease;
+            }
+
+            .service-sidebar-list li a:hover,
+            .service-sidebar-list li a.active,
+            .service-sidebar-list li .svc-link:hover,
+            .service-sidebar-list li .svc-link.active {
+                background: #0056b3 !important;
+                color: #fff !important;
+                border-color: #0056b3 !important;
+            }
+        }
+
+        /* Phones: single column */
+        @media (max-width: 768px) {
+            .service-sidebar-list {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+    <style>
+        /* ===== Match laptop styling on tablet/mobile ===== */
+        @media (max-width: 1200px) {
+
+            /* Base (idle) state = white pill, blue text */
+            .service-sidebar-list li a,
+            .service-sidebar-list li .svc-link {
+                background: #ffffff !important;
+                border: 1px solid #e6ecf2 !important;
+                color: #0a5fb3 !important;
+                /* brand blue */
+                font-weight: 700 !important;
+                /* same emphasis as desktop */
+                text-decoration: none !important;
+            }
+
+            .service-sidebar-list li a .label,
+            .service-sidebar-list li .svc-link .label {
+                color: inherit !important;
+            }
+
+            .service-sidebar-list li a .arrow i,
+            .service-sidebar-list li .svc-link .arrow i {
+                color: #0a5fb3 !important;
+                /* arrow blue like desktop */
+                transition: color .2s ease;
+            }
+
+            /* Hover + Active (scroll-selected) = yellow pill, dark text */
+            .service-sidebar-list li a:hover,
+            .service-sidebar-list li a:focus,
+            .service-sidebar-list li a.active,
+            .service-sidebar-list li .svc-link:hover,
+            .service-sidebar-list li .svc-link:focus,
+            .service-sidebar-list li .svc-link.active {
+                background: #fed201 !important;
+                /* brand yellow */
+                border-color: #fed201 !important;
+                color: #fff !important;
+                /* dark text for contrast */
+            }
+
+            .service-sidebar-list li a:hover .label,
+            .service-sidebar-list li a.active .label,
+            .service-sidebar-list li .svc-link:hover .label,
+            .service-sidebar-list li .svc-link.active .label {
+                color: #fff !important;
+            }
+
+            .service-sidebar-list li a:hover .arrow i,
+            .service-sidebar-list li a.active .arrow i,
+            .service-sidebar-list li .svc-link:hover .arrow i,
+            .service-sidebar-list li .svc-link.active .arrow i {
+                color: #fff !important;
+            }
+
+            /* Tidy the card title to match desktop tone */
+            .service-sidebar .sidebar-title {
+                color: #0a5fb3;
+                /* blue */
+                font-weight: 700;
+            }
+        }
+    </style>
+    <style>
+        /* ==== Horizontal button alignment for CTA section ==== */
+        .action-row {
+            display: flex;
+            flex-wrap: wrap;
+            /* allows wrapping on smaller screens */
+            justify-content: center;
+            /* centers horizontally */
+            align-items: center;
+            gap: 16px;
+            /* space between buttons */
+            margin-top: 10px;
+        }
+
+        /* Make buttons uniform in height and padding */
+        .action-row .post-btn a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Stack vertically only on small mobile screens */
+        @media (max-width: 576px) {
+            .action-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Button Color Override */
+        .cp-primary-btn,
+        a.cp-primary-btn,
+        .cp-primary-btn.cp-btn-2 {
+            background: #0a5fb3 !important;
+            border-color: #0a5fb3 !important;
+            color: #fff !important;
+        }
+
+        .cp-primary-btn:hover,
+        .cp-primary-btn:focus,
+        a.cp-primary-btn:hover,
+        a.cp-primary-btn:focus,
+        .cp-primary-btn.cp-btn-2:hover,
+        .cp-primary-btn.cp-btn-2:focus,
+        .cp-primary-btn.sent:hover,
+        .cp-primary-btn.sent:focus {
+            background: #fed201 !important;
+            border-color: #fed201 !important;
+            color: #fff !important;
+        }
+
+        .cp-primary-btn .btn-text,
+        .cp-primary-btn .btn-text-1,
+        .cp-primary-btn .btn-text-2,
+        .cp-primary-btn:hover .btn-text,
+        .cp-primary-btn:hover .btn-text-1,
+        .cp-primary-btn:hover .btn-text-2 {
+            color: inherit !important;
+        }
+    </style>
+    <style>
+        /* Header button scroll effect - white bg with black text */
+        .header.scrolled .header-btn {
+            background: #fff !important;
+            border-color: #fff !important;
+        }
+
+        .header.scrolled .header-btn:before {
+            background: #fff !important;
+        }
+
+        .header.scrolled .header-btn .btn-text-1,
+        .header.scrolled .header-btn .btn-text-2 {
+            color: #000 !important;
+        }
+
+        .header.scrolled .header-btn:hover {
+            background: #fed201 !important;
+            border-color: #fed201 !important;
+        }
+
+        .header.scrolled .header-btn:hover:before {
+            background: #fed201 !important;
+        }
+
+        .header.scrolled .header-btn:hover .btn-text-1,
+        .header.scrolled .header-btn:hover .btn-text-2 {
+            color: #fff !important;
+        }
+    </style>
+    <style>
+        /* Make header button white by default - very specific selectors */
+        .header .header-btn.cp-primary-btn,
+        .header .cp-primary-btn.header-btn,
+        a.cp-primary-btn.header-btn {
+            background: #fff !important;
+            border-color: #fff !important;
+        }
+
+        .header .header-btn.cp-primary-btn:before,
+        .header .cp-primary-btn.header-btn:before,
+        a.cp-primary-btn.header-btn:before {
+            background-color: #fff !important;
+        }
+
+        .header .header-btn .btn-text-1,
+        .header .header-btn .btn-text-2 {
+            color: #000 !important;
+        }
+
+        .header .header-btn:hover {
+            background: #fed201 !important;
+            border-color: #fed201 !important;
+        }
+
+        .header .header-btn:hover:before {
+            background-color: #fed201 !important;
+        }
+
+        .header .header-btn:hover .btn-text-1,
+        .header .header-btn:hover .btn-text-2 {
+            color: #fff !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="preloader-anim">
+                <div class="loading" data-loading-text="Forge India Connect"
+                    style="white-space:nowrap; display:inline-block; max-width:none; font-size:80px; font-weight:700; color:#fff;">
+                </div>
+            </div>
+            <div class="preloader-area area-left"></div>
+            <div class="preloader-area area-right"></div>
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <!-- Preloader -->
+
+
+
+
+    <!-- header-area-start -->
+    <style>
+        /* ===== HEADER (mobile + desktop) ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+            /* stacking context parent */
+            isolation: isolate;
+            /* lets ::before sit behind content */
+            transition: background .3s ease;
+        }
+
+        /* Safari/iOS-safe blue bar drawn behind header content */
+        .header.scrolled::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #0a5fb3;
+            /* your blue */
+            backdrop-filter: saturate(160%);
+            -webkit-backdrop-filter: saturate(160%);
+            border-bottom: 3.2px solid rgba(255, 255, 255, .25);
+            pointer-events: none;
+            z-index: 0;
+            /* <<< keep behind logo/content */
+        }
+
+        /* make sure header inner elements are above the ::before layer */
+        .header .primary-header,
+        .header .header-wrap,
+        .header .primary-header-inner,
+        .header .header-logo {
+            position: relative;
+            z-index: 1;
+            /* <<< above the blue layer */
+        }
+
+        /* ensure no wrapper paints a background over transparency */
+        .header,
+        .header .primary-header,
+        .header .header-wrap,
+        .header .primary-header-inner {
+            background: transparent !important;
+        }
+
+        /* ===== Off-canvas panel (unchanged) ===== */
+        .sidebar-area,
+        .mobile-side-menu,
+        .offcanvas,
+        .offcanvas-area {
+            position: fixed !important;
+            top: 0;
+            right: 0;
+            width: 380px;
+            max-width: 90vw;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -8px 0 24px rgba(0, 0, 0, .15);
+            z-index: 10000 !important;
+            /* > header */
+            transform: translateX(100%);
+            transition: transform .3s ease;
+            overflow-y: auto;
+        }
+
+        .is-open.sidebar-area,
+        .is-open.mobile-side-menu,
+        .is-open.offcanvas,
+        .is-open.offcanvas-area {
+            transform: translateX(0);
+        }
+
+        /* Backdrop */
+        .body-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+            z-index: 9995;
+            /* below panel, above page */
+            display: none;
+            pointer-events: none;
+        }
+
+        .body-overlay.active {
+            display: block;
+            pointer-events: auto;
+        }
+    </style>
+    <style>
+        /* Base: smooth color change */
+        .mobile-side-menu .side-menu-content a,
+        .mobile-side-menu .side-menu-content i,
+        .mobile-side-menu .side-menu-content p {
+            transition: color .2s ease;
+        }
+
+        /* Links in the menu + contact list + social icons */
+        .mobile-side-menu .side-menu-wrap a:hover,
+        .mobile-side-menu .side-menu-list a:hover,
+        .mobile-side-menu .side-menu-social a:hover,
+        .mobile-side-menu .side-menu-social a:hover i {
+            color: #fed201 !important;
+            text-decoration: none;
+        }
+
+        /* Make the whole contact row turn yellow on hover (text + icon) */
+        .mobile-side-menu .side-menu-list li:hover i,
+        .mobile-side-menu .side-menu-list li:hover p,
+        .mobile-side-menu .side-menu-list li:hover a {
+            color: #fed201 !important;
+        }
+
+        /* Accessibility: keyboard focus states */
+        .mobile-side-menu .side-menu-content a:focus-visible {
+            outline: 2px solid #fed201;
+            outline-offset: 2px;
+        }
+    </style>
+
+    <header class="header" style="position:fixed; top:0; left:0; width:100%; background:transparent;">
+        <div class="primary-header">
+            <div class="header-wrap">
+                <div class="primary-header-inner">
+
+                    <!-- Logo -->
+                    <div class="header-logo d-lg-block">
+                        <a href="./">
+                            <img id="site-logo" src="assets/img/logo/forgeindia_l1.webp"
+                                data-dark="assets/img/logo/forgeindia_l1.webp"
+                                data-light="assets/img/logo/forgeindia_white_l1.webp" alt="Forge India"
+                                style="height:70px; display:block;">
+                        </a>
+                    </div>
+                    <!-- Menu -->
+                    <div class="header-menu-wrap">
+                        <div class="mobile-menu-items">
+                            <ul>
+                                <li><a href="./">Home</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="services.html" class="active">Services</a>
+                                    <ul>
+                                        <li><a href="job-consulting.html">Job Consulting</a></li>
+                                        <li><a href="insurance-services.html">Insurance Services</a></li>
+                                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                        <li><a href="app-development.html">App Development</a></li>
+                                        <li><a href="website-development.html">Website Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="clientele.html">Clientele</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.header-menu-wrap -->
+
+                    <!-- Right Side -->
+                    <div class="header-right-wrap">
+                        <div class="header-right">
+                            <div class="header-btn-wrap">
+                                <a href="contact.html" class="cp-primary-btn header-btn cp-btn-2">
+                                    <span class="btn-text">
+                                        <span class="btn-text-1">Let’s Talk</span>
+                                        <span class="btn-text-2">Let’s Talk</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="sidebar-icon">
+                                <button class="sidebar-trigger open" aria-label="Open menu">
+                                    <span></span><span></span><span></span>
+                                </button>
+                            </div>
+
+                            <div class="header-right-item d-lg-none d-md-block">
+                                <a href="javascript:void(0)" class="mobile-side-menu-toggle"
+                                    aria-label="Open mobile menu">
+                                    <img src="assets/img/icon/mobile-menu.png" alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.header-right -->
+                    </div>
+
+                </div><!-- /.primary-header-inner -->
+            </div>
+        </div>
+    </header>
+    <!-- /.Main Header -->
+
+    <div id="popup-search-box">
+        <div class="box-inner-wrap d-flex align-items-center">
+            <form id="form" action="#" method="get" role="search">
+                <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+            </form>
+            <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+        </div>
+    </div>
+    <!-- /#popup-search-box -->
+
+    <div id="sidebar-area" class="sidebar-area">
+        <button class="sidebar-trigger close">
+            <svg class="sidebar-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7"
+                style="enable-background: new 0 0 16 12.7" xml:space="preserve">
+                <g>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)" width="16"
+                        height="2"></rect>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)" width="16"
+                        height="2"></rect>
+                </g>
+            </svg>
+        </button>
+        <div class="side-menu-content">
+            <div class="side-menu-logo">
+                <a class="dark-img" href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"
+                        style="width: 120px;"></a>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-about">
+                <div class="side-menu-header">
+                    <h3>About Us</h3>
+                </div>
+                <p>At <b>ForgeIndia Connect</b>, we empower careers and businesses with expert <b>Job Consulting</b> and
+                    innovative solutions in <b>Insurance, Digital Marketing, Website, and Mobile App Development.</b>
+                    Our mission is to connect talent, technology, and opportunities to build lasting success.</p>
+                <a href="contact.html" class="cp-primary-btn">
+                    <span class="btn-text">
+                        <span class="btn-text-1">Contact us</span>
+                        <span class="btn-text-2">Contact us</span>
+                    </span>
+                </a>
+            </div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a
+                        href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="linkedin"><a
+                        href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+    <!--/.sidebar-area-->
+
+    <div class="mobile-side-menu">
+        <div class="side-menu-content">
+            <div class="side-menu-head">
+                <a href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"></a>
+                <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:agenik@gmail.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a
+                        href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="linkedin"><a
+                        href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+    <!-- /.mobile-side-menu -->
+    <div class="mobile-side-menu-overlay"></div>
+
+    <section class="page-header"
+        style="position: relative; width: 100%; min-height: 60vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+
+        <!-- Banner background -->
+        <div class="banner-bg" style="position:absolute; top:0; left:0; width:100%; height:100%;
+              background:url('assets/img/images/services-banner.webp') center/cover no-repeat;
+              z-index:0;">
+        </div>
+
+        <!-- Dark overlay -->
+        <div class="banner-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%;
+              background:rgba(6,35,58,0.55); z-index:0;">
+        </div>
+
+        <!-- Content -->
+        <div class="container" style="position:relative; z-index:1; text-align:center; color:#fff;">
+            <div class="page-header-content">
+                <h1 class="title">Our Services</h1>
+                <h4 class="sub-title">
+                    <a class="home" href="./" style="color:#fff; text-decoration:none;">Home</a>
+                    <span class="inner-page" style="color:#ffcc00;">Web Development</span>
+                </h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- ./ page-header -->
+
+    <section class="service-details pt-80 pb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="service-sidebar sticky-widget">
+                        <h3 class="sidebar-title">All Services</h3>
+                        <ul class="service-sidebar-list">
+                            <li>
+                                <a href="job-consulting.html" class="svc-link">
+                                    <span class="label">Job Consulting</span>
+                                    <span class="arrow" aria-hidden="true">
+                                        <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="insurance-services.html" class="svc-link">
+                                    <span class="label">Insurance Services</span>
+                                    <span class="arrow" aria-hidden="true">
+                                        <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="digital-marketing.html" class="svc-link">
+                                    <span class="label">Digital Marketing</span>
+                                    <span class="arrow" aria-hidden="true">
+                                        <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="app-development.html" class="svc-link">
+                                    <span class="label">App Development</span>
+                                    <span class="arrow" aria-hidden="true">
+                                        <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="website-development.html" class="svc-link active">
+                                    <span class="label">Web Development</span>
+                                    <span class="arrow" aria-hidden="true">
+                                        <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- JB Start -->
+                <div class="col-lg-8 col-md-12">
+                    <!-- Website Development Start -->
+                    <div id="website-development" class="service-details-content">
+                        <h1 class="details-title">Website <span>Development</span></h1>
+
+                        <div class="service-details-img-2 img-reveal mb-30">
+                            <div class="img-overlay"></div>
+                            <img src="assets/img/images/web-dev.webp" alt="Website Development" />
+                        </div>
+
+                        <p class="mb-20">
+                            At <strong>Forge India</strong>, we create websites that are more than just digital
+                            brochures—they are powerful business tools. Our team blends stunning design with robust
+                            functionality to build websites that captivate visitors, drive conversions, and elevate your
+                            brand. From simple landing pages to complex e-commerce platforms, we deliver digital
+                            experiences that work.
+                        </p>
+
+                        <!-- Why Choose Us -->
+                        <h2 class="details-title-2">Why Choose <span>Our Web Development Services?</span></h2>
+                        <ul class="mb-30">
+                            <li><strong>Custom Design:</strong> No templates here. We design unique websites that
+                                reflect your brand identity and stand out from the competition.</li>
+                            <li><strong>Responsive &amp; Fast:</strong> Optimized for all devices and lightning-fast
+                                load times to ensure a seamless user experience.</li>
+                            <li><strong>SEO-Friendly:</strong> Built with clean code and best practices to help you rank
+                                higher on search engines from day one.</li>
+                            <li><strong>Secure &amp; Scalable:</strong> We prioritize security and build scalable
+                                architectures that grow with your business.</li>
+                        </ul>
+
+                        <!-- Services -->
+                        <h2 class="details-title-2">Our <span>Web Development Solutions</span></h2>
+                        <ul class="mb-30">
+                            <li><strong>Corporate Websites:</strong> Professional, credible sites that establish your
+                                authority and attract clients.</li>
+                            <li><strong>E-Commerce Solutions:</strong> Secure, user-friendly online stores with seamless
+                                payment gateways and inventory management.</li>
+                            <li><strong>CMS Development:</strong> Easy-to-manage websites using WordPress, Shopify, or
+                                custom CMS solutions tailored to your needs.</li>
+                            <li><strong>Landing Pages:</strong> High-converting pages designed specifically for
+                                marketing campaigns and lead generation.</li>
+                            <li><strong>Web Application Development:</strong> Custom web apps to automate processes,
+                                manage data, and solve complex business problems.</li>
+                        </ul>
+
+                        <!-- Partner -->
+                        <h2 class="details-title-2">Partner <span>With Us</span></h2>
+                        <p class="mb-30">
+                            With <strong>Forge India Web Development Services</strong>, you get a website that looks
+                            great and performs even better. Let’s build your digital future today.
+                        </p>
+
+                        <!-- CTA -->
+                        <div class="action-row">
+                            <div class="post-btn mb-20">
+                                <a href="contact.html" class="cp-primary-btn cp-btn-2"
+                                    aria-label="Start your website project">
+                                    <span class="btn-text">
+                                        <span class="btn-text-1">Build Your Website</span>
+                                        <span class="btn-text-2">Build Your Website</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="faq-content">
+                            <div class="faq-accordion fade-wrapper">
+                                <div class="accordion" id="faqWeb">
+                                    <!-- Q1 -->
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="faqWeb-h1">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#faqWeb-c1" aria-expanded="true"
+                                                aria-controls="faqWeb-c1">
+                                                How long does it take to build a website?
+                                            </button>
+                                        </h2>
+                                        <div id="faqWeb-c1" class="accordion-collapse collapse show"
+                                            aria-labelledby="faqWeb-h1" data-bs-parent="#faqWeb">
+                                            <div class="accordion-body">
+                                                A standard business website typically takes 2–4 weeks, while e-commerce
+                                                or custom platforms may take 6–8 weeks depending on complexity.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Q2 -->
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="faqWeb-h2">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqWeb-c2"
+                                                aria-expanded="false" aria-controls="faqWeb-c2">
+                                                Will my website be mobile-friendly?
+                                            </button>
+                                        </h2>
+                                        <div id="faqWeb-c2" class="accordion-collapse collapse"
+                                            aria-labelledby="faqWeb-h2" data-bs-parent="#faqWeb">
+                                            <div class="accordion-body">
+                                                Yes! All our websites are fully responsive, ensuring they look and work
+                                                perfectly on desktops, tablets, and smartphones.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Q3 -->
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="faqWeb-h3">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqWeb-c3"
+                                                aria-expanded="false" aria-controls="faqWeb-c3">
+                                                Can I update the content myself?
+                                            </button>
+                                        </h2>
+                                        <div id="faqWeb-c3" class="accordion-collapse collapse"
+                                            aria-labelledby="faqWeb-h3" data-bs-parent="#faqWeb">
+                                            <div class="accordion-body">
+                                                Yes, we can build your site on a CMS like WordPress, allowing you to
+                                                easily update text, images, and blogs without any coding knowledge.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Website Development END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ./ service-details -->
+    <div class="sponsor-section sponsor-2">
+        <div class="container">
+            <div class="sponsor-carousel swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/hdfc.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/axis.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/cub.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/techmahindra.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/capgemeni.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/polaris.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/hyundai.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/tata.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/foxconn.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-section overflow-hidden">
+        <div class="container">
+            <div class="footer-text text-center">
+                <h1 class="footer-header">let's talk <a href="contact.html" class="contact-btn"><i
+                            class="fa-regular fa-arrow-right"></i></a></h1>
+            </div>
+            <div class="row footer-wrap">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <div class="footer-logo">
+                                <a href="./"><img src="assets/img/logo/forgeindia_white_l1.webp" alt="logo"></a>
+                            </div>
+                        </div>
+                        <p class="mb-25">Forgeindia Connect - Shaping Future</p>
+                        <ul class="social-list">
+                            <li class="instagram"><a
+                                    href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="facebook"><a
+                                    href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li class="linkedin"><a
+                                    href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                        class="fab fa-linkedin"></i></a></li>
+                        </ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget footer-col-2">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Services</h3>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="job-consulting.html">Job Consulting</a></li>
+                            <li><a href="insurance-services.html">Insurance Services</a></li>
+                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="website-development.html">Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Address</h3>
+                        </div>
+                        <ul class="address-list">
+                            <li>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</li>
+                            <li><a href="tel:+916369406416">+91 63694-06416</a></li>
+                            <li><a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row copyright-content">
+                    <div class="col-md-6">
+                        <p>© <span id="current-year">2026</span> Forge India Connect Pvt Ltd. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                        <p class="copyright-text"> Developed & Maintained By
+                            <a href="https://www.unntangle.com" class="footer-link" target="_blank"
+                                rel="noopener">Unntangle</a>
+                        </p>
+                    </div>
+
+                    <style>
+                        .footer-link {
+                            color: inherit;
+                            text-decoration: none;
+                            transition: color 0.3s ease, text-decoration 0.3s ease;
+                        }
+
+                        .footer-link:hover {
+                            color: #FFD700;
+                            /* change to your brand color */
+                            text-decoration: underline;
+                        }
+                    </style>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./ footer-section -->
+
+    <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+    <!--scrollup-->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquary-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+    <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/vendor/waypoints.min.js"></script>
+    <script src="assets/js/vendor/venobox.min.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <script src="assets/js/vendor/meanmenu.js"></script>
+    <script src="assets/js/vendor/jquery.isotope.js"></script>
+    <script src="assets/js/vendor/swiper.min.js"></script>
+    <script src="assets/js/vendor/split-type.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/scroll-trigger.min.js"></script>
+    <script src="assets/js/vendor/smooth-scroll.js"></script>
+    <script src="assets/js/vendor/jquery.carouselTicker.js"></script>
+    <script src="assets/js/vendor/nice-select.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            const THRESHOLD = 10;
+
+            function onScroll() {
+                if (window.scrollY > THRESHOLD) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        })();
+    </script>
+    <script>
+        (function () {
+            const header = document.querySelector('.header');
+            const logo = document.getElementById('site-logo');
+            if (!header || !logo) return;
+
+            const darkSrc = logo.getAttribute('data-dark');
+            const lightSrc = logo.getAttribute('data-light');
+
+            function inStickyState() {
+                return header.classList.contains('scrolled') ||
+                    header.classList.contains('sticky-active') ||
+                    header.classList.contains('is-sticky');
+            }
+
+            function syncLogo() {
+                logo.src = inStickyState() ? lightSrc : darkSrc;
+            }
+
+            syncLogo();
+            window.addEventListener('scroll', syncLogo, { passive: true });
+            new MutationObserver(syncLogo).observe(header, { attributes: true, attributeFilter: ['class'] });
+        })();
+    </script>
+
+</body>
+
+</html>

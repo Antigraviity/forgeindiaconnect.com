@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <!-- Site Title -->
+    <title>Page Not Found | 404 Error </title>
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.webp">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/carouselTicker.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="preloader-anim">
+                <div class="loading" data-loading-text="Forge India Connect"
+                    style="white-space:nowrap; display:inline-block; max-width:none; font-size:80px; font-weight:700; color:#fff;">
+                </div>
+            </div>
+            <div class="preloader-area area-left"></div>
+            <div class="preloader-area area-right"></div>
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <!-- Preloader -->
+
+
+
+
+    <!-- header-area-start -->
+    <style>
+        /* Header layering */
+        .header {
+            z-index: 1000;
+            transition: background .3s ease;
+        }
+
+        .header.scrolled {
+            background: #0a5fb3;
+        }
+
+        /* blue when scrolled */
+
+        /* Off-canvas panel above header */
+        .sidebar-area,
+        .mobile-side-menu,
+        .offcanvas,
+        .offcanvas-area {
+            position: fixed !important;
+            top: 0;
+            right: 0;
+            width: 380px;
+            max-width: 90vw;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -8px 0 24px rgba(0, 0, 0, .15);
+            z-index: 10000 !important;
+            /* > header */
+            transform: translateX(100%);
+            transition: transform .3s ease;
+            overflow-y: auto;
+        }
+
+        /* visible state */
+        .is-open.sidebar-area,
+        .is-open.mobile-side-menu,
+        .is-open.offcanvas,
+        .is-open.offcanvas-area {
+            transform: translateX(0);
+        }
+
+        /* Backdrop (never block page when hidden) */
+        .body-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+            z-index: 9995;
+            /* below panel, above page */
+            display: none;
+            pointer-events: none;
+        }
+
+        .body-overlay.active {
+            display: block;
+            pointer-events: auto;
+        }
+    </style>
+
+    <header class="header sticky-active" style="position:fixed; top:0; left:0; width:100%; background:transparent;">
+        <div class="primary-header">
+            <div class="header-wrap">
+                <div class="primary-header-inner">
+
+                    <!-- Logo -->
+                    <div class="header-logo d-lg-block">
+                        <a href="./">
+                            <img id="site-logo" src="assets/img/logo/forgeindia_white_l1.webp"
+                                data-dark="assets/img/logo/forgeindia_white_l1.webp"
+                                data-light="assets/img/logo/forgeindia_white_l1.webp" alt="Forge India"
+                                style="height:70px; display:block;">
+                        </a>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="header-menu-wrap">
+                        <div class="mobile-menu-items">
+                            <ul>
+                                <li><a href="./">Home</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="services.html">Services</a>
+                                    <ul>
+                                        <li><a href="job-consulting.html">Job Consulting</a></li>
+                                        <li><a href="insurance-services.html">Insurance Services</a></li>
+                                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                        <li><a href="app-development.html">App Development</a></li>
+                                        <li><a href="website-development.html">Website Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="clientele.html">Clientele</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.header-menu-wrap -->
+
+                    <!-- Right Side -->
+                    <div class="header-right-wrap">
+                        <div class="header-right">
+                            <div class="header-btn-wrap">
+                                <a href="contact.html" class="cp-primary-btn header-btn cp-btn-2">
+                                    <span class="btn-text">
+                                        <span class="btn-text-1">Let’s Talk</span>
+                                        <span class="btn-text-2">Let’s Talk</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="sidebar-icon">
+                                <button class="sidebar-trigger open" aria-label="Open menu">
+                                    <span></span><span></span><span></span>
+                                </button>
+                            </div>
+
+                            <div class="header-right-item d-lg-none d-md-block">
+                                <a href="javascript:void(0)" class="mobile-side-menu-toggle"
+                                    aria-label="Open mobile menu">
+                                    <img src="assets/img/icon/mobile-menu.png" alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.header-right -->
+                    </div>
+
+                </div><!-- /.primary-header-inner -->
+            </div>
+        </div>
+    </header>
+    <!-- /.Main Header -->
+
+    <div id="popup-search-box">
+        <div class="box-inner-wrap d-flex align-items-center">
+            <form id="form" action="#" method="get" role="search">
+                <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+            </form>
+            <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+        </div>
+    </div>
+    <!-- /#popup-search-box -->
+
+    <div id="sidebar-area" class="sidebar-area">
+        <button class="sidebar-trigger close">
+            <svg class="sidebar-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7"
+                style="enable-background: new 0 0 16 12.7" xml:space="preserve">
+                <g>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)" width="16"
+                        height="2"></rect>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)" width="16"
+                        height="2"></rect>
+                </g>
+            </svg>
+        </button>
+        <div class="side-menu-content">
+            <div class="side-menu-logo">
+                <a class="dark-img" href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"
+                        style="width: 120px;"></a>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-about">
+                <div class="side-menu-header">
+                    <h3>About Us</h3>
+                </div>
+                <p>At <b>ForgeIndia Connect</b>, we empower careers and businesses with expert <b>Job Consulting</b> and
+                    innovative solutions in <b>Insurance, Digital Marketing, Website, and Mobile App Development.</b>
+                    Our mission is to connect talent, technology, and opportunities to build lasting success.</p>
+                <a href="contact.html" class="cp-primary-btn">
+                    <span class="btn-text">
+                        <span class="btn-text-1">Contact us</span>
+                        <span class="btn-text-2">Contact us</span>
+                    </span>
+                </a>
+            </div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No: 172/52, Chinna Marriyamman Kovil Street, Krishnagiri</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--/.sidebar-area-->
+
+    <div class="mobile-side-menu">
+        <div class="side-menu-content">
+            <div class="side-menu-head">
+                <a href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"></a>
+                <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No: 172/52, Chinna Marriyamman Kovil Street, Krishnagiri</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:agenik@gmail.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.mobile-side-menu -->
+    <div class="mobile-side-menu-overlay"></div>
+
+    <section class="page-header">
+        <div class="bg-pattern" data-background="assets/img/shapes/bg-pattern.png"></div>
+        <div class="container">
+            <div class="page-header-content text-center">
+                <h1 class="title">Page Not Found</h1>
+                <h4 class="sub-title"><a class="home" href="./">Home </a><span></span><span class="inner-page">404
+                        Error</span></h4>
+            </div>
+        </div>
+    </section>
+    <!-- ./ page-header -->
+
+    <section class="error-section pt-130 pb-130">
+        <div class="container">
+            <div class="error-content text-center">
+                <!-- <img src="assets/img/images/error-img.png" alt="img"> -->
+                <div class="error-btn mt-40">
+                    <a href="./" class="cp-primary-btn">
+                        <span class="btn-text">
+                            <span class="btn-text-1">Back To Home</span>
+                            <span class="btn-text-2">Back To Home</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./ error-section -->
+
+    <footer class="footer-section overflow-hidden">
+        <div class="container">
+            <div class="footer-text text-center">
+                <h1 class="footer-header">let's talk <a href="contact.html" class="contact-btn"><i
+                            class="fa-regular fa-arrow-right"></i></a></h1>
+            </div>
+            <div class="row footer-wrap">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <div class="footer-logo">
+                                <a href="./"><img src="assets/img/logo/forgeindia_white_l1.webp" alt="logo"></a>
+                            </div>
+                        </div>
+                        <p class="mb-25">Forgeindia Connect - Shaping Future</p>
+                        <ul class="social-list">
+                            <li class="instagram"><a
+                                    href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="facebook"><a
+                                    href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li class="linkedin"><a
+                                    href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                        class="fab fa-linkedin"></i></a></li>
+                        </ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget footer-col-2">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Services</h3>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="job-consulting.html">Job Consulting</a></li>
+                            <li><a href="insurance-services.html">Insurance Services</a></li>
+                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="website-development.html">Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Address</h3>
+                        </div>
+                        <ul class="address-list">
+                            <li>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</li>
+                            <li><a href="tel:+916369406416">+91 63694-06416</a></li>
+                            <li><a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row copyright-content">
+                    <div class="col-md-6">
+                        <p>© <span id="current-year">2026</span> Forge India Connect Pvt Ltd. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                        <p class="copyright-text"> Developed & Maintained By
+                            <a href="https://www.unntangle.com" class="footer-link" target="_blank"
+                                rel="noopener">Unntangle</a>
+                        </p>
+                    </div>
+
+                    <style>
+                        .footer-link {
+                            color: inherit;
+                            text-decoration: none;
+                            transition: color 0.3s ease, text-decoration 0.3s ease;
+                        }
+
+                        .footer-link:hover {
+                            color: #FFD700;
+                            /* change to your brand color */
+                            text-decoration: underline;
+                        }
+                    </style>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./ footer-section -->
+
+    <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+    <!--scrollup-->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquary-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+    <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/vendor/waypoints.min.js"></script>
+    <script src="assets/js/vendor/venobox.min.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <script src="assets/js/vendor/meanmenu.js"></script>
+    <script src="assets/js/vendor/jquery.isotope.js"></script>
+    <script src="assets/js/vendor/swiper.min.js"></script>
+    <script src="assets/js/vendor/split-type.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/scroll-trigger.min.js"></script>
+    <script src="assets/js/vendor/smooth-scroll.js"></script>
+    <script src="assets/js/vendor/jquery.carouselTicker.js"></script>
+    <script src="assets/js/vendor/nice-select.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

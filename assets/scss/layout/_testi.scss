@@ -1,0 +1,411 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Testimonial CSS
+----------------------------------------*/
+
+.testimonial-section{
+    background-color: #06192F;
+}
+
+.testi-top{
+    .swiper-arrow{
+        @include flex-vertical-center;
+        column-gap: 10px;
+        .swiper-nav{
+            background-color: var(--cp-color-theme-primary);
+            color: var(--cp-color-text-black);
+            height: 56px;
+            width: 56px;
+            @include flex-center;
+            border-radius: 50%;
+            @include transition(all 0.3s ease-in-out);
+            &:hover{
+                background-color: var(--cp-color-common-white);
+            }
+        }
+    }
+}
+
+.testi-wrapper{
+    border-bottom: 1px solid var(--cp-color-border-1);
+}
+
+.testi-item{
+    padding: 50px 60px;
+    border: 1px solid var(--cp-color-border-1);
+    border-radius: 8px;
+    @include breakpoint(sm){
+        padding: 50px 20px;
+    }
+    .icon{
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 40px;
+    }
+    .testi-author-box{
+        @include flex-vertical-center;
+        justify-content: space-between;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        .testi-author{
+            display: grid;
+            align-items: center;
+            grid-template-columns: 60px 1fr;
+            grid-gap: 20px;
+            .author-thumb{
+                height: 60px;
+                width: 60px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            .content{
+                .name{
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+                span{
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
+
+.testi-carousel{
+    padding-bottom: 80px;
+    .swiper-pagination{
+        bottom: 0;
+        .swiper-pagination-bullet{
+            background-color: transparent;
+            height: 28px;
+            width: 28px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            opacity: 1;
+            position: relative;
+            &:before{
+                background-color: var(--cp-color-heading-primary);
+                content: "";
+                height: 8px;
+                width: 8px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &.swiper-pagination-bullet-active{
+                border: 1px solid var(--cp-color-heading-primary);
+            }
+        }
+    }
+}
+
+.testi-item-3{
+    background-color: #F8F5F3;
+}
+
+// Testi 2
+
+.testi-left-content{
+    .testi-rating{
+        margin-bottom: 200px;
+        @include breakpoint(md){
+            display: none;
+        }
+    }
+    .testi-client-wrap{
+        max-width: 450px;
+        width: 100%;
+        margin-bottom: 30px;
+        .testi-author-list{
+            @include flex-vertical-center;
+            li{
+                height: 56px;
+                width: 56px;
+                @include flex-center;
+                border-radius: 50%;
+                border: 3px solid var(--cp-color-common-white);
+                &:not(:first-of-type){
+                    margin-left: -20px;
+                }
+                &.icon{
+                    background-color: var(--cp-color-theme-primary);
+                }
+            }
+        }
+        .desc{
+            font-family: var(--cp-ff-heading);
+            color: var(--cp-color-heading-primary);
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 10px;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+    }
+}
+
+.testi-carousel-2{
+    padding-bottom: 60px;
+    .swiper-pagination{
+        text-align: left;
+        bottom: 0;
+        .swiper-pagination-bullet{
+            height: 8px;
+            width: 16px;
+            background-color: #002E4F;
+            opacity: 0.4;
+            border-radius: 100px;
+            @include transition(all 0.3s ease-in-out);
+            &.swiper-pagination-bullet-active{
+                width: 40px;
+                background-color: var(--cp-color-heading-primary);
+                opacity: 1 ;
+            }
+        }
+    }
+}
+
+.testi-item-wrap{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 350px ;
+    grid-gap: 100px;
+    @include breakpoint(lg){
+        grid-gap: 30px;
+    }
+    @include breakpoint(md){
+        margin-top: 0px;
+    }
+    @include breakpoint(sm){
+        grid-template-columns: 1fr;
+    }
+    .testi-item{
+        padding: 0;
+        border: none;
+        p{
+            font-size: 24px;
+            font-weight: 500;
+            max-width: 470px;
+            @include breakpoint(lg){
+                font-size: 20px;
+            }
+        }
+        .testi-author-box{
+            .testi-author{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+// Testi 2
+
+.testimonial-section-2{
+    background-color: var(--cp-color-bg-1);
+}
+
+.testi-left-content-2{
+    .swiper-arrow{
+        @include flex-vertical-center;
+        column-gap: 10px;
+        flex-direction: column;
+        row-gap: 10px;
+        @include breakpoint(md){
+            align-items: baseline;
+            flex-direction: row;
+        }
+        .swiper-nav{
+            background-color: var(--cp-color-common-white);
+            color: var(--cp-color-text-black);
+            height: 56px;
+            width: 56px;
+            @include flex-center;
+            border-radius: 50%;
+            @include transition(all 0.3s ease-in-out);
+            &:hover{
+                background-color: var(--cp-color-theme-primary);
+            }
+        }
+    }
+}
+
+.testi-right-content-2{
+    border: none;
+    @include breakpoint(md){
+        margin-top: 40px;
+    }
+}
+
+.testi-wrapper-2{
+    border: none;
+}
+
+.testi-item-wrap-2{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 370px 1fr;
+    grid-gap: 70px;
+    @include breakpoint(md){
+        grid-gap: 30px;
+    }
+    @include breakpoint(sm){
+        grid-template-columns: 1fr;
+    }
+    .testi-item{
+        p{
+            font-family: var(--cp-ff-body);
+            color: #F8F5F3;
+            font-size: 26px;
+            font-weight: 400;
+            max-width: 100%;
+            font-style: italic;
+            @include breakpoint(md){
+                font-size: 20px;
+            }
+        }
+        .testi-author-box{
+            .testi-author{
+                .content{
+                    .name{
+                        color: #F8F5F3;
+                    }
+                    span{
+                        color: #B3C0CA;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Testi Counter
+
+.testi-counter-area.area-2{
+    padding-bottom: 150px;
+    @include breakpoint(md){
+        padding-bottom: 80px;
+    }
+    @include breakpoint(sm){
+        padding-bottom: 80px;
+    }
+}
+
+.counter-item-wrap-2{
+    @include breakpoint(md){
+        padding-bottom: 80px;
+    }
+    &>div{
+        padding: 0;
+        &:not(:last-of-type){
+            .counter-item{
+                border-right: 1px solid rgba(0, 46, 79, 0.2);
+                @include breakpoint(md){
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.counter-item{
+    padding: 50px 0;
+    border-top: 1px solid rgba(0, 46, 79, 0.2);
+    @include breakpoint(md){
+        border: none;
+        padding: 0;
+    }
+    .title{
+        font-family: "NewYork", sans-serif;
+        font-size: 100px;
+        font-weight: 400;
+        margin-bottom: 5px;
+        @include flex-vertical-center;
+        align-items: start;
+        justify-content: center;
+        line-height: 1;
+        @include breakpoint(md){
+            font-size: 60px;
+        }
+        .odometer-auto-theme{
+            font-family: inherit;
+            line-height: 1;
+        }
+        .icon{
+            font-size: 40px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+    }
+    p{
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+    &.item-1{
+        @include breakpoint(md){
+            text-align: center;
+        }
+        .title{
+            justify-content: start;
+            @include breakpoint(md){
+                justify-content: center;
+            }
+        }
+    }
+    &.item-4{
+        .title{
+            justify-content: end;
+            text-align: left;
+            @include breakpoint(md){
+                justify-content: center;
+                text-align: center;
+            }
+        }
+        p{
+            text-align: right;
+            @include breakpoint(md){
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Testi Counter Inner
+
+.testi-counter-area-2{
+    padding-bottom: 150px;
+    padding-top: 0;
+}
+
+.counter-item-wrap{
+    height: 270px;
+    width: 270px;
+    @include flex-center;
+    border: 1px dashed #E7E7E7;
+    border-radius: 50%;
+}
+
+// Testi 2
+
+.testi-item-2{
+    background-color: var(--cp-color-bg-2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* !END: Testimonial CSS */

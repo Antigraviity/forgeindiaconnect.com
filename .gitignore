@@ -1,0 +1,17 @@
+vendor/
+node_modules/
+.idea/
+.vscode/
+*.swp
+*.DS_Store
+*.log
+npm-debug.log
+yarn-error.log
+
+credentials.json
+virtual_card_counter.txt
+virtual_cards_log.txt
+*.zip
+connect/
+_ide_helper.php
+_ide_helper_models.php

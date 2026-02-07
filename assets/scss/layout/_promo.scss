@@ -1,0 +1,181 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Promo CSS
+----------------------------------------*/
+
+.promo-left-content{
+    @include breakpoint(lg){
+        margin-bottom: 40px;
+    }
+    .promo-left-inner{
+        margin-bottom: 230px;
+        @include breakpoint(lg){
+            margin-bottom: 30px;
+        }
+        .hero-author-list{
+            @include flex-vertical-center;
+            li{
+                height: 56px;
+                width: 56px;
+                @include flex-center;
+                border-radius: 50%;
+                border: 3px solid var(--cp-color-common-white);
+                &:not(:first-of-type){
+                    margin-left: -20px;
+                }
+                &.icon{
+                    background-color: var(--cp-color-theme-primary);
+                    i{
+                        color: var(--cp-color-heading-primary);
+                    }
+                }
+            }
+        }
+        .desc{
+            font-family: var(--cp-ff-heading);
+            color: var(--cp-color-heading-primary);
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+    }
+    .promo-video-box{
+        max-width: 189px;
+        width: 100%;
+        height: 189px;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .play-btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            a{
+                background-color: var(--cp-color-common-white);
+                color: var(--cp-color-heading-primary);
+                height: 70px;
+                width: 70px;
+                @include flex-center;
+                border-radius: 50%;
+                &:hover{
+                    background-color: var(--cp-color-theme-primary);
+                }
+            }
+        }
+    }
+}
+
+.promo-item{
+    background-color: #F8F5F3;
+    padding: 40px;
+    @include transition(all 0.3s ease-in-out);
+    @include  breakpoint(xl){
+        padding: 30px 20px;
+    }
+    @include breakpoint(sm){
+        padding-top: 0;
+    }
+    .icon{
+        background-color: var(--cp-color-theme-primary);
+        color: var(--cp-color-heading-primary);
+        height: 40px;
+        width: 40px;
+        @include flex-center;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        @include  breakpoint(xl){
+            font-size: 20px;
+        }
+    }
+    p{
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 400;
+        @include  breakpoint(xl){
+            font-size: 16px;
+        }
+    }
+}
+
+
+// Promo 2
+
+.promo-left-content-2{
+    .promo-img-2{
+        max-width: 800px;
+        width: 100%;
+        height: 320px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.promo-item-wrap{
+    margin-top: 30px;
+    @include breakpoint(md){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 24px;
+    }
+    @include breakpoint(sm){
+        grid-template-columns: 1fr;
+    }
+    .promo-item{
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-gap: 20px;
+        border: 1px solid #D9E4E3;
+        padding: 30px;
+        border-radius: 8px;
+        @include transition(all 0.3s ease-in-out);
+        overflow: hidden;
+        @include breakpoint(lg){
+            grid-template-columns: 1fr;
+            grid-gap: 0;
+        }
+        &:not(:last-of-type){
+            margin-bottom: 20px;
+            @include breakpoint(md){
+                margin-bottom: 0;
+            }
+        }
+        .title{
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: inherit;
+            @include transition(all 0.3s ease-in-out);
+        }
+        p{
+            color: #335872;
+            @include transition(all 0.3s ease-in-out);
+        }
+        &:hover{
+            background-color: var(--cp-color-heading-primary);
+            .content{
+                .title{
+                    color: var(--cp-color-common-white);
+                }
+                p{
+                    color: #B3C0CA;
+                }
+            }
+        }
+    }
+}
+
+/* !END: Promo CSS */

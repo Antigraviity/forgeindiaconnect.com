@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <!-- Site Title -->
+    <title>Contact | ForgeIndia Connect - Job & Business Consultancy</title>
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.webp">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/carouselTicker.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lfidi4sAAAAAH4vRBJwXCrnBi_d-ZBtZX8HnqZq"></script>
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="preloader-anim">
+                <div class="loading" data-loading-text="Forge India Connect"
+                    style="white-space:nowrap; display:inline-block; max-width:none; font-size:80px; font-weight:700; color:#fff;">
+                </div>
+            </div>
+            <div class="preloader-area area-left"></div>
+            <div class="preloader-area area-right"></div>
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <!-- Preloader -->
+
+
+
+
+    <!-- header-area-start -->
+    <!-- header-area-start -->
+    <style>
+        /* ===== HEADER (mobile + desktop) ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+            /* stacking context parent */
+            isolation: isolate;
+            /* lets ::before sit behind content */
+            transition: background .3s ease;
+        }
+
+        /* Blue bar drawn behind header content (works on iOS/Safari) */
+        .header.scrolled::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #0a5fb3;
+            border-bottom: 3.2px solid rgba(255, 255, 255, .25);
+            pointer-events: none;
+            z-index: 0;
+            /* keep behind logo/content */
+        }
+
+        /* make sure header inner elements sit above the ::before layer */
+        .header .primary-header,
+        .header .header-wrap,
+        .header .primary-header-inner,
+        .header .header-logo {
+            position: relative;
+            z-index: 1;
+            background: transparent !important;
+        }
+
+        /* ===== Off-canvas panel ===== */
+        .sidebar-area,
+        .mobile-side-menu,
+        .offcanvas,
+        .offcanvas-area {
+            position: fixed !important;
+            top: 0;
+            right: 0;
+            width: 380px;
+            max-width: 90vw;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -8px 0 24px rgba(0, 0, 0, .15);
+            z-index: 10000 !important;
+            /* > header */
+            transform: translateX(100%);
+            transition: transform .3s ease;
+            overflow-y: auto;
+        }
+
+        .is-open.sidebar-area,
+        .is-open.mobile-side-menu,
+        .is-open.offcanvas,
+        .is-open.offcanvas-area {
+            transform: translateX(0);
+        }
+
+        /* Backdrop */
+        .body-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+            z-index: 9995;
+            /* below panel, above page */
+            display: none;
+            pointer-events: none;
+        }
+
+        .body-overlay.active {
+            display: block;
+            pointer-events: auto;
+        }
+    </style>
+    <style>
+        /* Base: smooth color change */
+        .mobile-side-menu .side-menu-content a,
+        .mobile-side-menu .side-menu-content i,
+        .mobile-side-menu .side-menu-content p {
+            transition: color .2s ease;
+        }
+
+        /* Links in the menu + contact list + social icons */
+        .mobile-side-menu .side-menu-wrap a:hover,
+        .mobile-side-menu .side-menu-list a:hover,
+        .mobile-side-menu .side-menu-social a:hover,
+        .mobile-side-menu .side-menu-social a:hover i {
+            color: #fed201 !important;
+            text-decoration: none;
+        }
+
+        /* Make the whole contact row turn yellow on hover (text + icon) */
+        .mobile-side-menu .side-menu-list li:hover i,
+        .mobile-side-menu .side-menu-list li:hover p,
+        .mobile-side-menu .side-menu-list li:hover a {
+            color: #fed201 !important;
+        }
+
+        /* Accessibility: keyboard focus states */
+        .mobile-side-menu .side-menu-content a:focus-visible {
+            outline: 2px solid #fed201;
+            outline-offset: 2px;
+        }
+    </style>
+
+    <header class="header" style="position:fixed; top:0; left:0; width:100%; background:transparent;">
+        <div class="primary-header">
+            <div class="header-wrap">
+                <div class="primary-header-inner">
+
+                    <!-- Logo -->
+                    <div class="header-logo d-lg-block">
+                        <a href="./">
+                            <img id="site-logo" src="assets/img/logo/forgeindia_l1.webp"
+                                data-dark="assets/img/logo/forgeindia_l1.webp"
+                                data-light="assets/img/logo/forgeindia_white_l1.webp" alt="Forge India"
+                                style="height:70px; display:block;">
+                        </a>
+                    </div>
+
+                    <div class="header-menu-wrap">
+                        <div class="mobile-menu-items">
+                            <ul>
+                                <li><a href="./">Home</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="services.html">Services</a>
+                                    <ul>
+                                        <li><a href="job-consulting.html">Job Consulting</a></li>
+                                        <li><a href="insurance-services.html">Insurance Services</a></li>
+                                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                        <li><a href="app-development.html">App Development</a></li>
+                                        <li><a href="website-development.html">Website Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="clientele.html">Clientele</a></li>
+                                <li><a href="contact.html" class="active">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.header-menu-wrap -->
+
+                    <!-- Right Side -->
+                    <div class="header-right-wrap">
+                        <div class="header-right">
+                            <div class="header-btn-wrap">
+                                <a href="contact.html" class="cp-primary-btn header-btn cp-btn-2">
+                                    <span class="btn-text">
+                                        <span class="btn-text-1">Let's Talk</span>
+                                        <span class="btn-text-2">Let's Talk</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="sidebar-icon">
+                                <button class="sidebar-trigger open" aria-label="Open menu">
+                                    <span></span><span></span><span></span>
+                                </button>
+                            </div>
+
+                            <div class="header-right-item d-lg-none d-md-block">
+                                <a href="javascript:void(0)" class="mobile-side-menu-toggle"
+                                    aria-label="Open mobile menu">
+                                    <img src="assets/img/icon/mobile-menu.png" alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.header-right -->
+                    </div>
+
+                </div><!-- /.primary-header-inner -->
+            </div>
+        </div>
+    </header>
+    <!-- /.Main Header -->
+
+    <div id="popup-search-box">
+        <div class="box-inner-wrap d-flex align-items-center">
+            <form id="form" action="#" method="get" role="search">
+                <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+            </form>
+            <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+        </div>
+    </div>
+    <!-- /#popup-search-box -->
+
+
+    <div id="sidebar-area" class="sidebar-area">
+        <button class="sidebar-trigger close">
+            <svg class="sidebar-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7"
+                style="enable-background: new 0 0 16 12.7" xml:space="preserve">
+                <g>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)" width="16"
+                        height="2"></rect>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)" width="16"
+                        height="2"></rect>
+                </g>
+            </svg>
+        </button>
+        <div class="side-menu-content">
+            <div class="side-menu-logo">
+                <a class="dark-img" href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"
+                        style="width: 120px;"></a>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-about">
+                <div class="side-menu-header">
+                    <h3>About Us</h3>
+                </div>
+                <p>At <b>ForgeIndia Connect</b>, we empower careers and businesses with expert <b>Job Consulting</b> and
+                    innovative solutions in <b>Insurance, Digital Marketing, Website, and Mobile App Development.</b>
+                    Our mission is to connect talent, technology, and opportunities to build lasting success.</p>
+                <a href="contact.html" class="cp-primary-btn">
+                    <span class="btn-text">
+                        <span class="btn-text-1">Contact us</span>
+                        <span class="btn-text-2">Contact us</span>
+                    </span>
+                </a>
+            </div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a
+                        href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="linkedin"><a
+                        href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--/.sidebar-area-->
+
+    <div class="mobile-side-menu">
+        <div class="side-menu-content">
+            <div class="side-menu-head">
+                <a href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"></a>
+                <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:agenik@gmail.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a
+                        href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="linkedin"><a
+                        href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.mobile-side-menu -->
+    <div class="mobile-side-menu-overlay"></div>
+
+    <section class="page-header"
+        style="position: relative; width: 100%; min-height: 60vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+
+        <!-- Banner background -->
+        <div class="banner-bg" style="position:absolute; top:0; left:0; width:100%; height:100%;
+              background:url('assets/img/images/contact-banner.webp') center/cover no-repeat;
+              z-index:0;">
+        </div>
+
+        <!-- Dark overlay -->
+        <div class="banner-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%;
+              background:rgba(6,35,58,0.55); z-index:0;">
+        </div>
+
+        <!-- Content -->
+        <div class="container" style="position:relative; z-index:1; text-align:center; color:#fff;">
+            <div class="page-header-content">
+                <h1 class="title">Contact Us</h1>
+                <h4 class="sub-title">
+                    <a class="home" href="./" style="color:#fff; text-decoration:none;">Home</a>
+                    <span class="inner-page" style="color:#ffcc00;">Contact Us</span>
+                </h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- ./ page-header -->
+
+    <section class="contact-section pb-150 pt-150">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- LEFT FORM COLUMN -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="contact-left-content">
+                        <div class="contact-form">
+
+                            <h3 class="contact-form-title">Reach Us</h3>
+                            <div class="request-form">
+
+                                <form action="mail.php" method="post" id="ajax_contact" class="form-horizontal"
+                                    enctype="multipart/form-data">
+
+                                    <!-- Full Name -->
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-item">
+                                                <input type="text" id="fullname" name="fullname" class="form-control"
+                                                    placeholder="Full Name" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-item">
+                                                <input type="email" id="email" name="email" class="form-control"
+                                                    placeholder="Email address" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Subject -->
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-item">
+                                                <input type="text" id="subject" name="subject" class="form-control"
+                                                    placeholder="Subject">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message -->
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-item message-item">
+                                                <textarea id="message" name="message" cols="30" rows="5"
+                                                    class="form-control address" placeholder="Message"
+                                                    required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Resume Upload -->
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-item">
+                                                <label for="resume">Upload Resume (PDF or DOC) - Max 25MB</label>
+                                                <input type="file" id="resume" name="resume" class="form-control"
+                                                    accept=".pdf,.doc,.docx">
+                                                <small id="resumeError"
+                                                    style="color: #dc3545; display: none; margin-top: 5px;"></small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enrollment Fee Section -->
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-item">
+
+                                                <!-- Checkbox -->
+                                                <label
+                                                    style="display:flex;align-items:center;gap:8px;margin-bottom:10px;cursor:pointer;font-weight:400;">
+                                                    <input type="checkbox" id="agreeFee" disabled
+                                                        style="width:18px !important; height:18px !important; min-width:18px !important; flex-shrink:0 !important; margin:0 !important; cursor:not-allowed;">
+                                                    I agree to pay the ₹1500 enrollment fee for dedicated
+                                                    guidance
+                                                    support
+                                                </label>
+
+                                                <!-- No Refund Checkbox -->
+                                                <label
+                                                    style="display:flex;align-items:center;gap:8px;margin-bottom:10px;cursor:pointer;font-weight:400;">
+                                                    <input type="checkbox" id="agreeRefund" disabled
+                                                        style="width:18px !important; height:18px !important; min-width:18px !important; flex-shrink:0 !important; margin:0 !important; cursor:not-allowed;">
+                                                    I agree to the <a href="refund-policy.html" target="_blank"
+                                                        style="color:#0a5fb3; text-decoration:underline; font-weight:500; margin-left:3px;">No
+                                                        Refund Policy</a>
+                                                </label>
+
+                                                <!-- Pay Button Hidden by Default -->
+                                                <button id="rzp-button1" type="button" class="cp-primary-btn" style="
+                                                        margin-top:10px;
+                                                        display:none;
+                                                        border:2px solid #007bff;
+                                                        padding:10px 20px;
+                                                        border-radius:8px;
+                                                        background:white;
+                                                        color:#007bff;
+                                                        font-weight:600;
+                                                        cursor:pointer;
+                                                    ">
+                                                    Pay ₹1500
+                                                </button>
+
+                                                <!-- Hidden Payment ID -->
+                                                <input type="hidden" id="payment_id" name="payment_id">
+                                                <input type="hidden" id="order_id" name="order_id">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Hidden reCAPTCHA Input -->
+                                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+                                    <!-- Submit Button -->
+                                    <div class="submit-btn">
+                                        <button id="submitBtn" class="cp-primary-btn" type="button" disabled
+                                            style="cursor: not-allowed; opacity: 0.5;">
+                                            <span class="btn-text">
+                                                <span class="btn-text-1" id="submitText">Submit</span>
+                                                <span class="btn-text-2" id="submitText2">Submit</span>
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <!-- reCAPTCHA Legal Text -->
+                                    <div class="mt-3" style="font-size: 11px; color: #666; line-height: 1.4;">
+                                        This site is protected by reCAPTCHA and the Google
+                                        <a href="https://policies.google.com/privacy" target="_blank"
+                                            style="color: #0a5fb3;">Privacy Policy</a> and
+                                        <a href="https://policies.google.com/terms" target="_blank"
+                                            style="color: #0a5fb3;">Terms of Service</a> apply.
+                                    </div>
+
+                                    <!-- Hide Badge CSS -->
+                                    <style>
+                                        .grecaptcha-badge {
+                                            visibility: hidden !important;
+                                        }
+                                    </style>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT CONTENT COLUMN -->
+                <div class="col-lg-7">
+                    <div class="contact-content">
+                        <div class="section-heading heading-2 mb-30">
+                            <h2 class="section-title">
+                                Let's Start Working Together. <br><span>Get in Touch With Us</span>
+                            </h2>
+                        </div>
+
+                        <p>Please give us a call or drop us an email.</p>
+
+                        <ul class="contact-list">
+                            <li>> No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</li>
+                            <li><a href="tel:+916369406416">> +91 63694-06416</a></li>
+                            <li><a href="mailto:info@forgeindiaconnect.com">> info@forgeindiaconnect.com</a></li>
+                        </ul>
+
+                        <ul class="contact-social-list">
+                            <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Razorpay Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script>
+
+        // INITIAL STATE
+        let paymentRequired = false;
+        let paymentCompleted = false;
+
+        // Elements
+        const submitBtn = document.getElementById("submitBtn");
+        const submitText = document.getElementById("submitText");
+        const submitText2 = document.getElementById("submitText2");
+        const agreeFee = document.getElementById("agreeFee");
+        const agreeRefund = document.getElementById("agreeRefund");
+        const form = document.getElementById("ajax_contact");
+        const resumeField = document.getElementById("resume");
+        const resumeErrorElement = document.getElementById("resumeError");
+
+        // Helper: Update Button Text
+        function updateButtonText(text) {
+            if (submitText) { submitText.textContent = text; submitText.innerText = text; }
+            if (submitText2) { submitText2.textContent = text; submitText2.innerText = text; }
+        }
+
+        // --- 1. Resume Validation & Checkbox Enable Logic ---
+
+        function handleResumeChange() {
+            const file = resumeField.files[0];
+
+            // Reset Error Message
+            if (resumeErrorElement) {
+                resumeErrorElement.style.display = "none";
+                resumeErrorElement.textContent = "";
+            }
+
+            if (file) {
+                // A. Validate Size (25MB)
+                const maxSize = 25 * 1024 * 1024; // 25MB
+                if (file.size > maxSize) {
+                    const fileSizeMB = (file.size / (1024 * 1024)).toFixed(2);
+                    const msg = `⚠️ File size (${fileSizeMB}MB) exceeds 25MB limit.`;
+
+                    if (resumeErrorElement) {
+                        resumeErrorElement.style.display = "block";
+                        resumeErrorElement.style.color = "#dc3545";
+                        resumeErrorElement.textContent = msg;
+                    }
+                    alert(msg); // Explicit alert
+
+                    resumeField.value = ""; // Clear invalid file
+                    toggleCheckboxes(false);
+                    return;
+                }
+
+                // B. Validate Type
+                const fileName = file.name.toLowerCase();
+                const validExtensions = ['.pdf', '.doc', '.docx'];
+                if (!validExtensions.some(ext => fileName.endsWith(ext))) {
+                    const msg = "⚠️ Invalid file type. Please upload a PDF or DOC/DOCX file.";
+
+                    if (resumeErrorElement) {
+                        resumeErrorElement.style.display = "block";
+                        resumeErrorElement.style.color = "#dc3545";
+                        resumeErrorElement.textContent = msg;
+                    }
+                    alert(msg); // Explicit alert
+
+                    resumeField.value = ""; // Clear invalid file
+                    toggleCheckboxes(false);
+                    return;
+                }
+
+                // C. Valid File -> Enable Checkboxes
+                if (resumeErrorElement) {
+                    resumeErrorElement.style.display = "block";
+                    resumeErrorElement.style.color = "#28a745";
+                    resumeErrorElement.textContent = "✅ File uploaded successfully";
+                }
+                toggleCheckboxes(true);
+
+            } else {
+                // No file selected -> Disable
+                toggleCheckboxes(false);
+            }
+        }
+
+        function toggleCheckboxes(enable) {
+            if (enable) {
+                // Enable Fee Checkbox
+                agreeFee.disabled = false;
+                agreeFee.removeAttribute('disabled');
+                agreeFee.style.pointerEvents = "auto";
+                agreeFee.style.cursor = "pointer";
+                agreeFee.parentElement.style.opacity = "1";
+                agreeFee.parentElement.style.color = "#000000";
+                agreeFee.parentElement.style.cursor = "pointer";
+
+                // Enable Refund Checkbox
+                agreeRefund.disabled = false;
+                agreeRefund.removeAttribute('disabled');
+                agreeRefund.style.pointerEvents = "auto";
+                agreeRefund.style.cursor = "pointer";
+                agreeRefund.parentElement.style.opacity = "1";
+                agreeRefund.parentElement.style.color = "#000000";
+                agreeRefund.parentElement.style.cursor = "pointer";
+            } else {
+                // Disable Fee Checkbox
+                agreeFee.disabled = true;
+                agreeFee.setAttribute('disabled', 'true');
+                agreeFee.checked = false;
+                agreeFee.style.cursor = "not-allowed";
+                agreeFee.parentElement.style.opacity = "0.5";
+                agreeFee.parentElement.style.color = "#666666";
+                agreeFee.parentElement.style.cursor = "not-allowed";
+
+                // Disable Refund Checkbox
+                agreeRefund.disabled = true;
+                agreeRefund.setAttribute('disabled', 'true');
+                agreeRefund.checked = false;
+                agreeRefund.style.cursor = "not-allowed";
+                agreeRefund.parentElement.style.opacity = "0.5";
+                agreeRefund.parentElement.style.color = "#666666";
+                agreeRefund.parentElement.style.cursor = "not-allowed";
+            }
+
+            // Always update submit button state after toggling checkboxes
+            updateSubmitButtonState();
+        }
+
+        // --- 2. Submit Button Logic ---
+
+        function updateSubmitButtonState() {
+            // Only enable if BOTH are checked
+            if (agreeFee.checked && agreeRefund.checked) {
+                submitBtn.disabled = false;
+                submitBtn.removeAttribute('disabled');
+                submitBtn.style.opacity = "1";
+                submitBtn.style.cursor = "pointer";
+                updateButtonText("Pay & Submit");
+                paymentRequired = true;
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.setAttribute('disabled', 'disabled');
+                submitBtn.style.opacity = "0.5";
+                submitBtn.style.cursor = "not-allowed";
+                // updateButtonText("Submit"); // Optional: keep as Pay & Submit
+                paymentRequired = false;
+
+                // Clear payment data if unchecking
+                const pid = document.getElementById("payment_id");
+                if (pid) pid.value = "";
+            }
+        }
+
+        // --- 3. Event Listeners ---
+
+        resumeField.addEventListener("change", handleResumeChange);
+        agreeFee.addEventListener("change", updateSubmitButtonState);
+        agreeRefund.addEventListener("change", updateSubmitButtonState);
+
+        // Initialization
+        handleResumeChange(); // Ensure correct state on load
+
+
+        // --- 4. Razorpay & Submission ---
+
+        var options = {
+            "key": "rzp_live_RjEDvWCouoVF7d",
+            "amount": 150000,
+            "currency": "INR",
+            "name": "Forge India Connect",
+            "description": "Enrollment Fee",
+            "modal": {
+                "ondismiss": function () {
+                    console.log("Payment dismissed");
+                }
+            }
+        };
+
+        var rzp1;
+        try {
+            if (options.key && options.key !== "" && options.key !== "rzp_test_dummy") {
+                rzp1 = new Razorpay(options);
+            }
+        } catch (e) {
+            console.warn('Razorpay initialization failed:', e.message);
+        }
+
+        submitBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Safety Check
+            if (!agreeFee.checked || !agreeRefund.checked) {
+                alert("Please agree to the enrollment fee and no refund policy.");
+                return;
+            }
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // reCAPTCHA
+            const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+            if (isLocalhost) {
+                console.warn("Localhost bypass");
+                document.getElementById('g-recaptcha-response').value = "localhost_bypass_token";
+                proceedWithSubmission();
+                return;
+            }
+
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6Lfidi4sAAAAAH4vRBJwXCrnBi_d-ZBtZX8HnqZq', { action: 'submit' }).then(function (token) {
+                    document.getElementById('g-recaptcha-response').value = token;
+                    proceedWithSubmission();
+                }).catch(function (err) {
+                    console.error("reCAPTCHA Error:", err);
+                    alert("reCAPTCHA failed.");
+                    resetButton();
+                });
+            });
+        });
+
+        function proceedWithSubmission() {
+            submitBtn.setAttribute('disabled', 'disabled');
+            submitBtn.style.pointerEvents = 'none';
+            updateButtonText("Processing...");
+
+            fetch("create_order.php", { method: "POST" })
+                .then(res => {
+                    if (!res.ok) throw new Error(`Server error: ${res.status}`);
+                    return res.text();
+                })
+                .then(text => {
+                    try { return JSON.parse(text); }
+                    catch (e) { throw new Error('Invalid JSON response'); }
+                })
+                .then(order => {
+                    if (order.error) throw new Error(order.message || 'Payment initialization failed');
+
+                    options.order_id = order.order_id;
+                    options.amount = order.amount;
+
+                    options.handler = function (response) {
+                        document.getElementById("payment_id").value = response.razorpay_payment_id;
+                        document.getElementById("order_id").value = response.razorpay_order_id;
+                        paymentCompleted = true;
+                        updateButtonText("Submitting...");
+
+                        const formData = new FormData(form);
+                        fetch("mail.php", { method: "POST", body: formData })
+                            .then(res => res.json())
+                            .then(result => {
+                                if (result.status === "success") {
+                                    alert("Payment Successful! ID: " + (result.data.virtual_card_number || "N/A"));
+                                    form.reset();
+                                    paymentRequired = false;
+                                    paymentCompleted = false;
+
+                                    // Reset UI
+                                    const errEl = document.getElementById('resumeError');
+                                    if (errEl) { errEl.style.display = 'none'; errEl.textContent = ''; }
+                                    toggleCheckboxes(false); // Disable everything
+
+                                    updateButtonText("Submit");
+                                    submitBtn.removeAttribute('disabled');
+                                    submitBtn.style.pointerEvents = 'auto';
+                                } else {
+                                    alert(result.message || 'Failed to submit form.');
+                                    resetButton();
+                                }
+                            })
+                            .catch(err => {
+                                console.error('Form submission error:', err);
+                                alert('Payment received but form submission failed.');
+                                resetButton();
+                            });
+                    };
+
+                    var paymentObject = new Razorpay(options);
+                    paymentObject.on('payment.failed', function (response) {
+                        alert('Payment failed: ' + response.error.description);
+                        resetButton();
+                    });
+                    paymentObject.open();
+
+                    // Re-enable in case modal closed (backup)
+                    submitBtn.removeAttribute('disabled');
+                    submitBtn.style.pointerEvents = 'auto';
+                    updateButtonText("Pay & Submit");
+                })
+                .catch(err => {
+                    console.error('Payment initialization error:', err);
+                    alert('Error: ' + err.message);
+                    resetButton();
+                });
+        }
+
+        // Prevent Enter Key Submit
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            submitBtn.click();
+        });
+
+        function resetButton() {
+            updateButtonText('Submit');
+            submitBtn.removeAttribute('disabled');
+            submitBtn.style.pointerEvents = 'auto';
+            submitBtn.style.background = '#fed201';
+            submitBtn.style.color = '#000';
+
+            toggleCheckboxes(false);
+
+            const errEl = document.getElementById('resumeError');
+            if (errEl) { errEl.style.display = 'none'; errEl.textContent = ''; }
+        }
+
+    </script>
+
+
+
+    <!-- ./ contact-section -->
+
+    <div class="map-wrapper pb-150">
+        <div class="container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997062.2254679316!2d76.98669433593746!3d12.531104499656413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac35ace8d45195%3A0x2aad177f8d6c671c!2sForge%20India%20Connect%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1764761046438!5m2!1sen!2sin"
+                width="100%" height="620" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <footer class="footer-section overflow-hidden">
+        <div class="container">
+            <div class="footer-text text-center">
+                <h1 class="footer-header">let's talk <a href="contact.html" class="contact-btn"><i
+                            class="fa-regular fa-arrow-right"></i></a></h1>
+            </div>
+            <div class="row footer-wrap">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <div class="footer-logo">
+                                <a href="./"><img src="assets/img/logo/forgeindia_white_l1.webp" alt="logo"></a>
+                            </div>
+                        </div>
+                        <p class="mb-25">Forgeindia Connect - Shaping Future</p>
+                        <ul class="social-list">
+                            <li class="instagram"><a
+                                    href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="facebook"><a
+                                    href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li class="linkedin"><a
+                                    href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                        class="fab fa-linkedin"></i></a></li>
+                        </ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget footer-col-2">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Services</h3>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="job-consulting.html">Job Consulting</a></li>
+                            <li><a href="insurance-services.html">Insurance Services</a></li>
+                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="website-development.html">Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Address</h3>
+                        </div>
+                        <ul class="address-list">
+                            <li>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</li>
+                            <li><a href="tel:+916369406416">+91 63694-06416</a></li>
+                            <li><a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row copyright-content">
+                    <div class="col-md-6">
+                        <p>© <span id="current-year">2026</span> Forge India Connect Pvt Ltd. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                        <p class="copyright-text"> Developed & Maintained By
+                            <a href="https://www.unntangle.com" class="footer-link" target="_blank"
+                                rel="noopener">Unntangle</a>
+                        </p>
+                    </div>
+
+                    <style>
+                        .footer-link {
+                            color: inherit;
+                            text-decoration: none;
+                            transition: color 0.3s ease, text-decoration 0.3s ease;
+                        }
+
+                        .footer-link:hover {
+                            color: #FFD700;
+                            /* change to your brand color */
+                            text-decoration: underline;
+                        }
+                    </style>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./ footer-section -->
+
+    <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+    <!--scrollup-->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquary-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+    <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/vendor/waypoints.min.js"></script>
+    <script src="assets/js/vendor/venobox.min.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <script src="assets/js/vendor/meanmenu.js"></script>
+    <script src="assets/js/vendor/jquery.isotope.js"></script>
+    <script src="assets/js/vendor/swiper.min.js"></script>
+    <script src="assets/js/vendor/split-type.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/scroll-trigger.min.js"></script>
+    <script src="assets/js/vendor/smooth-scroll.js"></script>
+    <script src="assets/js/vendor/jquery.carouselTicker.js"></script>
+    <script src="assets/js/vendor/nice-select.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            const header = document.querySelector('.header');
+            const logo = document.getElementById('site-logo');
+            if (!header || !logo) return;
+
+            const darkSrc = logo.getAttribute('data-dark') || logo.src;
+            const lightSrc = logo.getAttribute('data-light') || logo.src;
+            const THRESHOLD = 40;
+
+            function update() {
+                if (window.scrollY > THRESHOLD) {
+                    header.classList.add('scrolled');
+                    logo.src = lightSrc;
+                } else {
+                    header.classList.remove('scrolled');
+                    logo.src = darkSrc;
+                }
+            }
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+        })();
+    </script>
+    <script>
+        (function () {
+            const openers = [
+                document.querySelector('.sidebar-trigger'),
+                document.querySelector('.mobile-side-menu-toggle')
+            ].filter(Boolean);
+
+            const panel =
+                document.querySelector('.sidebar-area') ||
+                document.querySelector('.mobile-side-menu') ||
+                document.querySelector('.offcanvas') ||
+                document.querySelector('.offcanvas-area');
+
+            if (!panel) return;
+
+            let overlay = document.querySelector('.body-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'body-overlay';
+                document.body.appendChild(overlay);
+            }
+
+            const lock = () => { document.documentElement.style.overflow = document.body.style.overflow = 'hidden'; document.body.style.touchAction = 'none'; };
+            const unlock = () => { document.documentElement.style.overflow = document.body.style.overflow = ''; document.body.style.touchAction = ''; };
+
+            const open = (e) => { e && e.preventDefault(); panel.classList.add('is-open'); overlay.classList.add('active'); lock(); };
+            const close = (e) => { e && e.preventDefault(); panel.classList.remove('is-open'); overlay.classList.remove('active'); unlock(); };
+
+            openers.forEach(btn => btn.addEventListener('click', (e) => panel.classList.contains('is-open') ? close(e) : open(e)));
+            overlay.addEventListener('click', close);
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(e); });
+            panel.addEventListener('click', (e) => { if (e.target.closest('.sidebar-close,.offcanvas-close,.close,[data-offcanvas-close]')) close(e); });
+            window.addEventListener('resize', () => { if (window.innerWidth >= 992) close(); });
+        })();
+    </script>
+    <script>
+        (function () {
+            const header = document.querySelector('.header');
+            const logo = document.getElementById('site-logo');
+            if (!header || !logo) return;
+
+            const darkSrc = logo.getAttribute('data-dark') || logo.src;
+            const lightSrc = logo.getAttribute('data-light') || logo.src;
+            const THRESHOLD = 40;
+
+            function update() {
+                if (window.scrollY > THRESHOLD) {
+                    header.classList.add('scrolled');
+                    logo.src = lightSrc;
+                } else {
+                    header.classList.remove('scrolled');
+                    logo.src = darkSrc;
+                }
+            }
+            update();
+            window.addEventListener('scroll', update, { passive: true });
+        })();
+    </script>
+
+</body>
+
+</html>

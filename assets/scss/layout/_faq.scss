@@ -1,0 +1,65 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: FAQ CSS
+----------------------------------------*/
+
+.faq-content{
+    .faq-accordion{
+        .accordion-item{
+            border: none;
+            border-radius: 8px;
+            border: 1px solid rgba(179, 192, 202, 0.4);
+            &:not(:last-of-type){
+                margin-bottom: 10px;
+            }
+            .accordion-button{
+                background-color: #F8F5F3;
+                border: 1px solid rgba(179, 192, 202, 0.4);
+                color: var(--cp-color-heading-primary);
+                border: none;
+                box-shadow: none;
+                font-size: 24px;
+                font-weight: 600;
+                padding-left: 24px;
+                border-bottom: 1px solid transparent;
+                @include breakpoint(sm){
+                    font-size: 18px;
+                    padding-left: 20px;
+                }
+                &:after{
+                    color: var(--cp-color-heading-primary);
+                    background-image: none;
+                    font-family: "Font Awesome 6 Pro";
+                    font-size: 14px;
+                    font-weight: 700;
+                    content: "+";
+                    line-height: 1;
+                    @include flex-center;
+                    border-radius: 50%;
+                }
+                &:not(.collapsed){
+                    border-bottom: 1px solid rgba(179, 192, 202, 0.4);
+                    &:after{
+                        color: var(--cp-color-text-black);
+                        content: "-";
+                        transform: rotate(0);
+                    }
+                }
+            }
+            .accordion-body{
+                background-color: #F8F5F3;
+                color: var(--cp-color-heading-primary);
+                font-size: 18px;
+                font-weight: 400;
+                padding: 15px 30px 20px 24px;
+                @include breakpoint(sm){
+                    font-size: 14px;
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* !END: FAQ CSS */

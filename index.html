@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <!-- Site Title -->
+    <title>Home | ForgeIndia Connect - Job & Business Consultancy</title>
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.webp">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/carouselTicker.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Make the white logo pop against the blue header on scroll */
+        .header.scrolled .header-logo img#site-logo {
+            /* stronger & crisper white */
+            filter: brightness(1.15) contrast(1.35) drop-shadow(0 0 8px rgba(255, 255, 255, .45));
+            transition: filter .25s ease, transform .25s ease;
+            transform: translateZ(0);
+            /* avoids blur on some GPUs */
+            will-change: filter;
+        }
+
+        /* Normal state (top of page) */
+        .header:not(.scrolled) .header-logo img#site-logo {
+            filter: none;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="container" class="container-preloader">
+            <div class="preloader-anim">
+                <div class="loading" data-loading-text="Forge India Connect"
+                    style="white-space:nowrap; display:inline-block; max-width:none; font-size:80px; font-weight:700; color:#fff;">
+                </div>
+            </div>
+            <div class="preloader-area area-left"></div>
+            <div class="preloader-area area-right"></div>
+        </div>
+    </div>
+
+    <!-- Preloader -->
+    <!-- Preloader -->
+
+
+
+
+    <!-- header-area-start -->
+    <style>
+        /* Header layering */
+        .header {
+            z-index: 1000;
+            transition: background .3s ease;
+        }
+
+        .header.scrolled {
+            background: #0b56a2;
+            /* semi-transparent blue */
+            backdrop-filter: blur(30px) saturate(180%);
+            /* frosted glass effect */
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            /* Safari support */
+            border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+            /* subtle glass border */
+            transition: background .3s ease, backdrop-filter .3s ease;
+        }
+
+        /* Off-canvas panel above header */
+        .sidebar-area,
+        .mobile-side-menu,
+        .offcanvas,
+        .offcanvas-area {
+            position: fixed !important;
+            top: 0;
+            right: 0;
+            width: 380px;
+            max-width: 90vw;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -8px 0 24px rgba(0, 0, 0, .15);
+            z-index: 10000 !important;
+            /* > header */
+            transform: translateX(100%);
+            transition: transform .3s ease;
+            overflow-y: auto;
+        }
+
+        /* visible state */
+        .is-open.sidebar-area,
+        .is-open.mobile-side-menu,
+        .is-open.offcanvas,
+        .is-open.offcanvas-area {
+            transform: translateX(0);
+        }
+
+        /* Backdrop (never block page when hidden) */
+        .body-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+            z-index: 9995;
+            /* below panel, above page */
+            display: none;
+            pointer-events: none;
+        }
+
+        .body-overlay.active {
+            display: block;
+            pointer-events: auto;
+        }
+
+        /* Make all header wrappers transparent so nothing covers the glass */
+        .header,
+        .header .primary-header,
+        .header .header-wrap,
+        .header .primary-header-inner {
+            background: transparent !important;
+        }
+
+        /* Create the frosted glass as a background layer of the header */
+        .header {
+            position: fixed;
+            /* you already have this inline */
+            top: 0;
+            left: 0;
+            width: 100%;
+            isolation: isolate;
+            /* keeps ::before behind content but above page */
+            z-index: 1000;
+        }
+
+        /* GLASS when scrolled */
+        .header.scrolled::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 95, 179, 0.319);
+            /* semi-transparent blue */
+            backdrop-filter: blur(30px) saturate(180%);
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+            pointer-events: none;
+            /* clicks go through */
+        }
+
+        /* (Optional) disable any theme after/overlay if present */
+        .header::after {
+            background: none !important;
+        }
+    </style>
+    <style>
+        /* Base: smooth color change */
+        .mobile-side-menu .side-menu-content a,
+        .mobile-side-menu .side-menu-content i,
+        .mobile-side-menu .side-menu-content p {
+            transition: color .2s ease;
+        }
+
+        /* Links in the menu + contact list + social icons */
+        .mobile-side-menu .side-menu-wrap a:hover,
+        .mobile-side-menu .side-menu-list a:hover,
+        .mobile-side-menu .side-menu-social a:hover,
+        .mobile-side-menu .side-menu-social a:hover i {
+            color: #fed201 !important;
+            text-decoration: none;
+        }
+
+        /* Make the whole contact row turn yellow on hover (text + icon) */
+        .mobile-side-menu .side-menu-list li:hover i,
+        .mobile-side-menu .side-menu-list li:hover p,
+        .mobile-side-menu .side-menu-list li:hover a {
+            color: #fed201 !important;
+        }
+
+        /* Accessibility: keyboard focus states */
+        .mobile-side-menu .side-menu-content a:focus-visible {
+            outline: 2px solid #fed201;
+            outline-offset: 2px;
+        }
+    </style>
+    <style>
+        /* Responsive hero banner typography (overrides inline) */
+        .hero-2 .title {
+            font-size: clamp(24px, 6vw, 70px) !important;
+            line-height: 1.1;
+            font-weight: 700;
+            color: #fff;
+            white-space: normal !important;
+            /* allow wrapping (beats inline) */
+            text-align: center;
+            word-break: break-word;
+            margin: 0 auto 15px;
+            max-width: 90%;
+        }
+
+        .hero-2 .title span {
+            display: inline-block;
+        }
+
+        .hero-2 .hero-tagline {
+            font-size: clamp(16px, 2vw, 24px) !important;
+            line-height: 1.4;
+            margin-top: 10px;
+            max-width: 800px;
+            opacity: .95;
+            color: #fff;
+            white-space: normal !important;
+            /* wrap tagline too */
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Container breathes on smaller screens */
+        @media (max-width: 992px) {
+            .hero-container {
+                max-width: 90vw !important;
+                padding: 0 15px;
+            }
+        }
+
+        /* Extra small phones */
+        @media (max-width: 576px) {
+            .hero-2 .title {
+                font-size: clamp(20px, 8vw, 42px) !important;
+            }
+
+            .hero-2 .hero-tagline {
+                font-size: 16px !important;
+            }
+        }
+    </style>
+
+    <header class="header" style="position:fixed; top:0; left:0; width:100%; background:transparent;">
+        <div class="primary-header">
+            <div class="header-wrap">
+                <div class="primary-header-inner">
+
+                    <!-- Logo -->
+                    <div class="header-logo d-lg-block">
+                        <a href="/">
+                            <img id="site-logo" src="assets/img/logo/forgeindia_l1.webp"
+                                data-dark="assets/img/logo/forgeindia_l1.webp"
+                                data-light="assets/img/logo/forgeindia_white_l1.webp" alt="Forge India"
+                                style="height:70px; display:block;">
+                        </a>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="header-menu-wrap">
+                        <div class="mobile-menu-items">
+                            <ul>
+                                <li><a href="/" class="active">Home</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="services.html">Services</a>
+                                    <ul>
+                                        <li><a href="job-consulting.html">Job Consulting</a></li>
+                                        <li><a href="insurance-services.html">Insurance Services</a></li>
+                                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                        <li><a href="app-development.html">App Development</a></li>
+                                        <li><a href="website-development.html">Website Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="clientele.html">Clientele</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.header-menu-wrap -->
+
+                    <!-- Right Side -->
+                    <div class="header-right-wrap">
+                        <div class="header-right">
+                            <div class="header-btn-wrap">
+                                <a href="contact.html" class="cp-primary-btn header-btn cp-btn-2">
+                                    <span class="btn-text">
+                                        <span class="btn-text-1">Let’s Talk</span>
+                                        <span class="btn-text-2">Let’s Talk</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="sidebar-icon">
+                                <button class="sidebar-trigger open" aria-label="Open menu">
+                                    <span></span><span></span><span></span>
+                                </button>
+                            </div>
+
+                            <div class="header-right-item d-lg-none d-md-block">
+                                <a href="javascript:void(0)" class="mobile-side-menu-toggle"
+                                    aria-label="Open mobile menu">
+                                    <img src="assets/img/icon/mobile-menu.png" alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.header-right -->
+                    </div>
+
+                </div><!-- /.primary-header-inner -->
+            </div>
+        </div>
+    </header>
+    <!-- /.Main Header -->
+
+    <!-- Inline Scripts -->
+    <script>
+        /* Logo swap on scroll */
+        (function () {
+            const header = document.querySelector('.header');
+            const logo = document.getElementById('site-logo');
+            const THRESHOLD = 50; // set to 0 if header starts blue
+
+            function updateHeaderState() {
+                if (window.scrollY > THRESHOLD) {
+                    header.classList.add('scrolled');
+                    logo.src = logo.getAttribute('data-light');  // white
+                } else {
+                    header.classList.remove('scrolled');
+                    logo.src = logo.getAttribute('data-dark');   // default
+                }
+            }
+            updateHeaderState();
+            window.addEventListener('scroll', updateHeaderState, { passive: true });
+        })();
+    </script>
+
+    <script>
+        /* Off-canvas open/close with proper scroll lock/unlock */
+        (function () {
+            const openers = [
+                document.querySelector('.sidebar-trigger'),
+                document.querySelector('.mobile-side-menu-toggle')
+            ].filter(Boolean);
+
+            const panel =
+                document.querySelector('.sidebar-area') ||
+                document.querySelector('.mobile-side-menu') ||
+                document.querySelector('.offcanvas') ||
+                document.querySelector('.offcanvas-area');
+
+            if (!panel) return;
+
+            // Ensure a single overlay exists
+            let overlay = document.querySelector('.body-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'body-overlay';
+                document.body.appendChild(overlay);
+            }
+
+            const lockScroll = () => {
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
+                document.body.style.touchAction = 'none';
+            };
+            const unlockScroll = () => {
+                document.documentElement.style.overflow = '';
+                document.body.style.overflow = '';
+                document.body.style.touchAction = '';
+            };
+
+            const openPanel = (e) => {
+                e && e.preventDefault();
+                panel.classList.add('is-open');
+                overlay.classList.add('active');
+                lockScroll();
+            };
+            const closePanel = (e) => {
+                e && e.preventDefault();
+                panel.classList.remove('is-open');
+                overlay.classList.remove('active');
+                unlockScroll();
+            };
+
+            // Open
+            openers.forEach(btn => btn.addEventListener('click', (e) => {
+                // If already open and trigger is clicked again => close (toggle)
+                if (panel.classList.contains('is-open')) return closePanel(e);
+                openPanel(e);
+            }));
+
+            // Close interactions
+            overlay.addEventListener('click', closePanel);
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(e); });
+
+            // Close buttons inside panel (support multiple class names)
+            panel.addEventListener('click', (e) => {
+                if (e.target.closest('.sidebar-close, .offcanvas-close, .close, [data-offcanvas-close]')) {
+                    closePanel(e);
+                }
+            });
+
+            // Safety: on desktop resize, ensure unlocked
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 992) closePanel();
+            });
+        })();
+    </script>
+
+    <!-- frosted header -->
+
+    <!-- frosted header -->
+
+
+    <!-- <header class="header sticky-active">
+            <div class="primary-header">
+                <div class="header-wrap">
+                    <div class="primary-header-inner">
+                        <div class="header-logo d-lg-block">
+                            <a href="./">
+                                <img src="assets/img/logo/forgeindia_l1.webp" alt="logo">
+                            </a>
+                        </div>
+                        <div class="header-menu-wrap">
+                            <div class="mobile-menu-items">
+                                <ul>
+                                    <li><a href="./">Home</a></li>
+                                     <li class="menu-item-has-children">
+                                        <a href="service">Services</a>
+                                        <ul>
+                                            <li><a href="Job Consultation">Job Consultation</a></li>
+                                            <li><a href="service-details">Insurance services</a></li>
+                                            <li><a href="service-details">Digital Marketing</a></li>
+                                            <li><a href="service-details">Mobile Application</a></li>
+                                            <li><a href="service-details">Website Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="blog-grid">Clientele</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div> -->
+    <!-- /.header-menu-wrap -->
+    <!-- <div class="header-right-wrap">
+                            <div class="header-right">
+                                <div class="header-btn-wrap">
+                                    <a href="contact.html" class="cp-primary-btn header-btn cp-btn-2">
+                                        <span class="btn-text">
+                                            <span class="btn-text-1">Let’s Talk</span>
+                                            <span class="btn-text-2">Let’s Talk</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="sidebar-icon">
+                                    <button class="sidebar-trigger open">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                                <div class="header-right-item d-lg-none d-md-block">
+                                    <a href="javascript:void(0)" class="mobile-side-menu-toggle">
+                                        <img src="assets/img/icon/mobile-menu.png" alt="icon">
+                                    </a>
+                                </div>
+                            </div> -->
+    <!-- /.header-right -->
+    <!-- </div>
+                    </div> -->
+    <!-- /.primary-header-inner -->
+    <!-- </div>
+            </div>
+        </header> -->
+    <!-- /.Main Header  -->
+
+    <div id="popup-search-box">
+        <div class="box-inner-wrap d-flex align-items-center">
+            <form id="form" action="#" method="get" role="search">
+                <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+            </form>
+            <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+        </div>
+    </div>
+    <!-- /#popup-search-box -->
+
+    <div id="sidebar-area" class="sidebar-area">
+        <button class="sidebar-trigger close">
+            <svg class="sidebar-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7"
+                style="enable-background: new 0 0 16 12.7" xml:space="preserve">
+                <g>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)" width="16"
+                        height="2"></rect>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)" width="16"
+                        height="2"></rect>
+                </g>
+            </svg>
+        </button>
+        <div class="side-menu-content">
+            <div class="side-menu-logo">
+                <a class="dark-img" href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"
+                        style="width: 120px;"></a>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-about">
+                <div class="side-menu-header">
+                    <h3>About Us</h3>
+                </div>
+                <p>At <b>ForgeIndia Connect</b>, we empower careers and businesses with expert <b>Job Consulting</b> and
+                    innovative solutions in <b>Insurance, Digital Marketing, Website, and Mobile App Development.</b>
+                    Our mission is to connect talent, technology, and opportunities to build lasting success.</p>
+                <a href="contact.html" class="cp-primary-btn">
+                    <span class="btn-text">
+                        <span class="btn-text-1">Contact us</span>
+                        <span class="btn-text-2">Contact us</span>
+                    </span>
+                </a>
+            </div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a
+                        href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="linkedin"><a
+                        href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--/.sidebar-area-->
+
+    <div class="mobile-side-menu">
+        <div class="side-menu-content">
+            <div class="side-menu-head">
+                <a href="./"><img src="assets/img/logo/forgeindia_l1.webp" alt="logo"></a>
+                <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916369406416">+91 63694-06416</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:agenik@gmail.com">info@forgeindiaconnect.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="instagram"><a
+                        href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li class="linkedin"><a
+                        href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                            class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.mobile-side-menu -->
+    <div class="mobile-side-menu-overlay"></div>
+
+    <!-- <section class="hero-2 overflow-hidden" 
+    style="position: relative; 
+           width: 100%; 
+           min-height: 85vh; 
+           display: flex; 
+           align-items: center; 
+           background: linear-gradient(rgba(6,35,58,0.55), rgba(6,35,58,0.55)), 
+                       url('assets/img/images/banner.webp') center/cover no-repeat;">
+<div class="container hero-container"
+     style="position:relative; z-index:1; color:#fff; text-align:center;
+            max-width:70vw; margin:0 auto; display:flex; flex-direction:column;
+            align-items:center; gap:14px;">
+
+  <h2 class="title text-animation-effect"
+      style="font-size:clamp(20px,7vw,62px); line-height:1.1; font-weight:700; margin-bottom:5px; padding-bottom: 15px; color:#fff;
+             white-space:nowrap; max-width:100%; overflow:hidden; text-overflow:ellipsis;">
+    Shaping Careers. <span style="display:inline;">Building Futures.</span>
+  </h2>
+
+  <p class="hero-tagline"
+     style="font-size:23px; margin-top:10px; max-width:700px; opacity:.95; color:#fff; white-space:nowrap;">
+    Expert guidance and trusted consultancy to land your dream job.
+  </p>
+
+  <div class="hero-counter-item">
+    <h3 class="counter-title" style="font-size:70px; font-weight:bold; margin:0; color:#fff;">
+      <span class="odometer" data-count="1024">0</span><span class="icon">+</span>
+    </h3>
+    <p style="font-size :35px; margin:30px; color:#fff;">Successful Placements</p>
+  </div>
+</div> -->
+    <section class="hero-2 overflow-hidden"
+        style="position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center;">
+
+        <!-- Background video -->
+        <video autoplay muted loop playsinline
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+            <source src="assets/img/video/banner-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Dark overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+              background: rgba(6,35,58,0.55); z-index: 0;"></div>
+
+        <!-- Hero content -->
+        <div class="container hero-container" style="position:relative; z-index:1; color:#fff; text-align:center;
+              max-width:70vw; margin:0 auto; display:flex; flex-direction:column;
+              align-items:center; gap:14px;">
+
+            <h2 class="title text-animation-effect" style="font-size:clamp(20px,7vw,62px); line-height:1.1; font-weight:700; margin-top:160px; padding-bottom: 15px; color:#fff;
+               white-space:nowrap; max-width:100%; overflow:hidden; text-overflow:ellipsis;">
+                Shaping Careers. <span style="display:inline;">Building Futures.</span>
+            </h2>
+
+            <p class="hero-tagline"
+                style="font-size:23px; margin-top:-10px; max-width:700px; opacity:.95; color:#fff; white-space:nowrap;">
+                Expert guidance and trusted consultancy to land your dream job.
+            </p>
+
+            <div class="hero-counter-item">
+                <h3 class="counter-title" style="font-size:70px; font-weight:bold; margin:0; color:#fff;">
+                    <span class="odometer" data-count="1024">0</span><span class="icon">+</span>
+                </h3>
+                <p style="font-size :35px; margin:30px; color:#fff;">Successful Placements</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    </div>
+    </section>
+
+
+    <!-- <section class="hero-2 overflow-hidden">
+            <div class="bg-pattern" data-background="assets/img/shapes/bg-pattern.png"></div>
+            <div class="container hero-container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hero-content-2 white-content">
+                            <h2 class="title text-animation-effect">Shaping Careers. <span>Building Futures.</span></h2>
+                            <div class="hero-content-inner">
+                                <div class="hero-counter">
+                                    <p class="hero-desc"> Expert guidance and trusted consultancy to land your dream job.</p>
+                                    <div class="hero-counter-item">
+                                        <h3 class="counter-title"><span class="odometer" data-count="1024">0</span><span class="icon">+</span></h3>
+                                        <p>Successful Placements</p>
+                                    </div>
+                                </div>
+                                <div class="hero-img-wrap">
+                                    <div class="hero-img"><img src="assets/img/images/banner" alt="hero-img"></div>
+                                    <div class="hero-btn-wrap">
+                                        <a href="about.html" class="hero-btn">
+                                            <i class="fa-regular fa-arrow-right-long"></i>
+                                            <img class="explore-text" src="assets/img/icon/hero-btn.png" alt="text">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- ./ hero-section -->
+
+    <div class="running-text">
+        <div class="carouselTicker carouselTicker-start" data-speed="fast">
+            <ul class="text-anim carouselTicker__list">
+                <li>Job <span>Consulting</span></li>
+                <li>Insurance <span>Service</span></li>
+                <li>Digital <span>Marketing</span></li>
+                <li>App <span>Development</span></li>
+                <li>Website <span>Development</span></li>
+                <li>Job <span>Consulting</span></li>
+                <li>Insurance <span>Service</span></li>
+                <li>Digital <span>Marketing</span></li>
+                <li>App <span>Development</span></li>
+                <li>Website <span>Development</span></li>
+            </ul>
+        </div>
+    </div>
+    <!-- ./ running-text -->
+
+    <div class="sponsor-section sponsor-2">
+        <div class="container">
+            <div class="sponsor-carousel swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/hdfc.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/axis.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/cub.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/techmahindra.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/capgemeni.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/polaris.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/hyundai.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/tata.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="sponsor-item text-center">
+                            <a href="#"><img src="assets/img/logo/clientele/foxconn.webp" alt="sponsor"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="service-section-2 pt-150 pb-150">
+        <div class="container">
+            <div class="row fade-wrapper">
+                <div class="col-lg-5 col-md-12">
+                    <div class="service-content-left sticky-widget">
+                        <div class="section-heading heading-2 mb-0">
+                            <h4 class="sub-heading" data-text-animation="fade-in" data-duration="1.5">Our Services</h4>
+                            <h2 class="section-title" data-text-animation="fade-in-right" data-split="char"
+                                data-duration="0.6" data-stagger="0.03">Forgeindia Connect –<br> <span>Your Partner in
+                                    Careers & Growth</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="service-item-wrap fade-top">
+                        <a href="job-consulting.html" class="service-item">
+                            <span class="icon"><img src="assets/img/icon/service-1.png" alt="service"></span>
+                            <span class="service-content">
+                                <span class="title">Job <br> Consulting</span>
+                                <span class=" item-desc mb-0">Kickstart your career with expert guidance. From resume
+                                    building to interview prep, we connect you with opportunities that fit your skills
+                                    and goals.</span>
+                            </span>
+                        </a>
+                        <a href="insurance-services.html" class="service-item">
+                            <span class="icon"><img src="assets/img/icon/service-2.png" alt="service"></span>
+                            <span class="service-content">
+                                <span class="title">Insurance <br> Services</span>
+                                <span class="item-desc mb-0">Protect your future with tailored insurance plans. We help
+                                    you choose the right coverage to safeguard your health, family, and business.</span>
+                            </span>
+                        </a>
+                        <a href="digital-marketing.html" class="service-item">
+                            <span class="icon"><img src="assets/img/icon/service-3.png" alt="service"></span>
+                            <span class="service-content">
+                                <span class="title">Digital <br> Solutions</span>
+                                <span class="item-desc mb-0">Comprehensive online strategies—from marketing to
+                                    development—that boost your brand, expand your reach, and drive measurable
+                                    growth.</span>
+                            </span>
+                        </a>
+                        <a href="services.html" class="service-item">
+                            <span class="icon"><img src="assets/img/icon/service-4.png" alt="service"></span>
+                            <span class="service-content">
+                                <span class="title">Explore <br> More</span>
+                                <span class="item-desc mb-0">Discover our full range of services and see how we can help
+                                    transform your vision into success.</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./ service-section -->
+
+    <section class="about-section-2 pt-150 pb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-img-2 img-reveal">
+                        <div class="img-overlay"></div>
+                        <img src="assets/img/images/about.webp" alt="about">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content-2 fade-wrapper">
+                        <div class="section-heading heading-2 mb-35">
+                            <h4 class="sub-heading" data-text-animation="fade-in" data-duration="1.5">Who we are</h4>
+                            <h2 class="section-title" data-text-animation="fade-in-right" data-split="char"
+                                data-duration="0.6" data-stagger="0.03">Career & Business Solutions <br> <span>You Can
+                                    Trust</span></h2>
+                        </div>
+                        <p class="fade-top">At ForgeIndia Connect, we go beyond just consultancy — we create
+                            opportunities.
+                            From guiding individuals towards their dream careers to providing insurance solutions, and
+                            delivering digital growth through marketing, websites, and mobile apps, we are your trusted
+                            partner for success.
+
+                            Secure your future, grow your business, and achieve more with solutions built around your
+                            goals.</p>
+                        <div class="about-btn fade-top">
+                            <a href="about.html" class="cp-primary-btn cp-btn-2">
+                                <span class="btn-text">
+                                    <span class="btn-text-1">Know more</span>
+                                    <span class="btn-text-2">Know more</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./ about-section -->
+
+    <!-- ./ testi-counter-area -->
+    <section class="testi-counter-area">
+        <div class="container">
+            <div class="row gy-lg-0 gy-4 counter-item-wrap-2">
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item item-1">
+                        <h3 class="title"><span class="odometer" data-count="1024">0</span><span class="icon">+</span>
+                        </h3>
+                        <p>Successful Job Placements</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item text-center">
+                        <h3 class="title"><span class="odometer" data-count="6">0</span><span class="icon">+</span></h3>
+                        <p>Years of Expertise</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item text-center">
+                        <h3 class="title"><span class="odometer" data-count="40">0</span><span class="icon">+</span>
+                        </h3>
+                        <p>Trusted Clients</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="counter-item item-4 ">
+                        <h3 class="title"><span class="odometer" data-count="80">0</span><span class="icon">+</span>
+                        </h3>
+                        <p>Projects Delivered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./ testi-counter-area -->
+
+    <section class="step-section pt-150 pb-150 bg-dark-1">
+        <div class="step-img" style="margin-bottom: 40px;"><img src="assets/img/images/growth.webp" alt="step"
+                style="width: 80%; height: auto; border-bottom-left-radius: 90px; border-bottom-right-radius: 90px; display:block; max-width:100%; ">
+        </div>
+        <div class="container">
+            <div class="section-heading heading-2 white-content">
+                <h4 class="sub-heading" data-text-animation="fade-in" data-duration="1.5">How it work</h4>
+                <h2 class="section-title" data-text-animation="fade-in-right" data-split="char" data-duration="0.6"
+                    data-stagger="0.03">Building Growth<br> <span>That Lasts</span></h2>
+            </div>
+            <div class="row step-details-item-wrap gy-lg-0 gy-5">
+                <div class="line"></div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-details-item">
+                        <span class="number">Step-01</span>
+                        <div class="dot-shape"></div>
+                        <h3 class="title">Consultation & Analysis</h3>
+                        <p>We carefully analyze client goals to design tailored solutions for lasting success and
+                            growth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-details-item">
+                        <span class="number">Step-02</span>
+                        <div class="dot-shape"></div>
+                        <h3 class="title">Strategy & Planning</h3>
+                        <p>Our experts create personalized strategies aligning with career and business objectives.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-details-item">
+                        <span class="number">Step-03</span>
+                        <div class="dot-shape"></div>
+                        <h3 class="title">Implementation</h3>
+                        <p>We execute solutions through consulting, marketing, and development for measurable growth.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-details-item">
+                        <span class="number">Step-04</span>
+                        <div class="dot-shape"></div>
+                        <h3 class="title">Success & Growth</h3>
+                        <p>Continuous support ensures long-term success, sustainable growth, and future opportunities
+                            achieved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./ step-section -->
+
+    <!-- <section class="team-section pt-150 pb-150">
+            <div class="container">
+                <div class="section-heading heading-2 text-center">
+                    <h4 class="sub-heading" data-text-animation="fade-in" data-duration="1.5"><img src="assets/img/icon/section-heading.png" alt="icon">How it work</h4>
+                    <h2 class="section-title" data-text-animation="fade-in-right" data-split="char" data-duration="0.6" data-stagger="0.03">Meet the Financial <br><span>Advisor team</span></h2>
+                </div>
+                <div class="row gy-lg-0 gy-5 fade-wrapper ">
+                    <div class="col-lg-3 col-md-6 fade-top">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <div class="overlay"></div>
+                                <img src="assets/img/team/team-1.png" alt="team">
+                                <ul class="team-social">
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <h3 class="title"><a href="team-details">Lauren Janet</a></h3>
+                            <span>Founder CEO</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-top">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <div class="overlay"></div>
+                                <img src="assets/img/team/team-2.png" alt="team">
+                                <ul class="team-social">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                            <h3 class="title"><a href="team-details">Devon Lane</a></h3>
+                            <span>Junior Executive</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-top">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <div class="overlay"></div>
+                                <img src="assets/img/team/team-3.png" alt="team">
+                                <ul class="team-social">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                            <h3 class="title"><a href="team-details">Cameron Williamson</a></h3>
+                            <span>Jr. Advisor</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 fade-top">
+                        <div class="team-item">
+                            <div class="team-thumb">
+                                <div class="overlay"></div>
+                                <img src="assets/img/team/team-4.png" alt="team">
+                                <ul class="team-social">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                            <h3 class="title"><a href="team-details">Jenny Wilson</a></h3>
+                            <span>Founder CEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- ./ team-section -->
+
+    <section class="promo-section-2 pt-150 pb-150">
+        <div class="container">
+            <div class="row fade-wrapper">
+                <div class="col-lg-8">
+                    <div class="promo-left-content-2 sticky-widget">
+                        <div class="section-heading heading-2 mb-40">
+                            <h4 class="sub-heading" data-text-animation="fade-in" data-duration="1.5">Job & Digital
+                                Consulting</h4>
+                            <h2 class="section-title" data-text-animation="fade-in-right" data-split="char"
+                                data-duration="0.6" data-stagger="0.03">Years of Expertise, Smarter Career
+                                &<br><span>Business Solutions</span></h2>
+                        </div>
+                        <div class="promo-img-2 img-reveal">
+                            <div class="img-overlay"></div>
+                            <img src="assets/img/images/experience.webp" alt="promo">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="promo-item-wrap fade-top">
+                        <div class="promo-item">
+                            <div class="icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="content">
+                                <h3 class="title">Expert Job Consulting</h3>
+                                <p>Personalized career guidance and trusted placements to land your dream role.</p>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="content">
+                                <h3 class="title">Insurance & Financial Security</h3>
+                                <p>Comprehensive insurance solutions to safeguard your future and peace of mind.</p>
+                            </div>
+                        </div>
+                        <div class="promo-item">
+                            <div class="icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="content">
+                                <h3 class="title">End-to-End Support</h3>
+                                <p>From consultation to execution, we ensure long-term growth and success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ./ promo-section -->
+
+    <!-- <div class="sponsor-section sponsor-2">
+            <div class="container">
+                <div class="sponsor-carousel swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/hdfc.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/axis.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/cub.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/techmahindra.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/capgemeni.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/polaris.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/hyundai.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/tata.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item text-center">
+                                <a href="#"><img src="assets/img/logo/clientele/foxconn.webp" alt="sponsor"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- ./ sponsor-section -->
+    <!-- 
+        <section class="testimonial-section-2 pt-150 pb-150">
+            <div class="container">
+                <div class="row testi-top">
+                    <div class="col-lg-2 col-md-12"></div>
+                    <div class="col-lg-10 col-md-12">
+                        <div class="section-heading heading-2 white-content">
+                            <h4 class="sub-heading" data-text-animation="fade-in" data-duration="1.5"><img src="assets/img/icon/section-heading-2.png" alt="icon">Testimonial</h4>
+                            <h2 class="section-title" data-text-animation="fade-in-right" data-split="char" data-duration="0.6" data-stagger="0.03">What Our Clients Say<br> <span>About Us</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container testi-wrapper testi-wrapper-2">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-12">
+                        <div class="testi-left-content testi-left-content-2">
+                            <div class="swiper-arrow">
+                                <div class="swiper-nav swiper-next"><img src="assets/img/icon/service-arrow-1.png" alt="icon"></div>
+                                <div class="swiper-nav swiper-prev"><img src="assets/img/icon/service-arrow-2.png" alt="icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-12">
+                        <div class="testi-right-content testi-right-content-2">
+                            <div class="testi-carousel-2 swiper pb-0">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testi-item-wrap testi-item-wrap-2">
+                                            <div class="testi-author-img">
+                                                <img src="assets/img/testi/testi-img-2.png" alt="testi">
+                                            </div>
+                                            <div class="testi-item white-content">
+                                                <div class="icon"><img src="assets/img/icon/quote-2.png" alt="quote"></div>
+                                                <p>Responsive web design employs a combination of Fluid grids, flexible images, and CSS media Queries to dynamically adjust elements on the Page. This means that text</p>
+                                                <div class="testi-author-box">
+                                                    <div class="testi-author">
+                                                        <div class="content">
+                                                            <h4 class="name">Ava Madeline</h4>
+                                                            <span>Sr. Developer</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- ./ testimonial-section -->
+
+    <!-- <section class="blog-section pt-150 pb-150 fade-wrapper">
+            <div class="container">
+                <div class="row gy-lg-0 gy-4 fade-wrapper">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="blog-left-content sticky-widget">
+                            <div class="section-heading heading-2 mb-20">
+                                <h4 class="sub-heading" data-text-animation="fade-in" data-duration="1.5"><img src="assets/img/icon/section-heading.png" alt="icon">Blogs & News</h4>
+                                <h2 class="section-title" data-text-animation="fade-in-right" data-split="char" data-duration="0.6" data-stagger="0.03">Update Blog and <br><span>News</span></h2>
+                            </div>
+                            <p class="mb-40">Get the latest insights, trends, and expert <br> advice on finance, investments, and <br> business strategies.</p>
+                            <div class="blog-btn">
+                                <a href="blog-grid" class="cp-primary-btn">
+                                    <span class="btn-text">
+                                        <span class="btn-text-1">All Blogs<i class="fa-solid fa-arrow-right-long"></i></span>
+                                        <span class="btn-text-2">All Blogs<i class="fa-solid fa-arrow-right-long"></i></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="post-card-wrap">
+                            <div class="post-card post-card-2">
+                                <div class="post-thumb">
+                                    <img src="assets/img/blog/post-4.png" alt="post">
+                                </div>
+                                <div class="post-content">
+                                    <h3 class="title"><a href="blog-details">Explore the Essence of Your Smart <br> New business</a></h3>
+                                    <ul class="post-meta">
+                                        <li class="category-text">Web Design</li>
+                                        <li>Jan 20, 2025</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="post-card post-card-2">
+                                <div class="post-thumb">
+                                    <img src="assets/img/blog/post-5.png" alt="post">
+                                </div>
+                                <div class="post-content">
+                                    <h3 class="title"><a href="blog-details">Building Wealth Smart Strategies for a <br> Stronger Future</a></h3>
+                                    <ul class="post-meta">
+                                        <li class="category-text">Web Design</li>
+                                        <li>Jan 20, 2025</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="post-card post-card-2">
+                                <div class="post-thumb">
+                                    <img src="assets/img/blog/post-6.png" alt="post">
+                                </div>
+                                <div class="post-content">
+                                    <h3 class="title"><a href="blog-details">Business Development Strategies for <br> Advisory Services</a></h3>
+                                    <ul class="post-meta">
+                                        <li class="category-text">Web Design</li>
+                                        <li>Jan 20, 2025</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- ./ blog-section -->
+
+    <footer class="footer-section overflow-hidden">
+        <div class="container">
+            <div class="footer-text text-center">
+                <h1 class="footer-header">let's talk <a href="contact.html" class="contact-btn"><i
+                            class="fa-regular fa-arrow-right"></i></a></h1>
+            </div>
+            <div class="row footer-wrap">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <div class="footer-logo">
+                                <a href="./"><img src="assets/img/logo/forgeindia_white_l1.webp" alt="logo"></a>
+                            </div>
+                        </div>
+                        <p class="mb-25">Forgeindia Connect - Shaping Future</p>
+                        <ul class="social-list">
+                            <li class="instagram"><a
+                                    href="https://www.instagram.com/forgeindia_connect?igsh=MTF4Z2M4Z3p2OHA2YQ=="><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="facebook"><a
+                                    href="https://www.facebook.com/people/Forge-India-Connect/61583095918027"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li class="linkedin"><a
+                                    href="https://www.linkedin.com/in/forge-india-connect-57474838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                        class="fab fa-linkedin"></i></a></li>
+                        </ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget footer-col-2">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Services</h3>
+                        </div>
+                        <ul class="footer-list">
+                            <li><a href="job-consulting.html">Job Consulting</a></li>
+                            <li><a href="insurance-services.html">Insurance Services</a></li>
+                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                            <li><a href="app-development.html">App Development</a></li>
+                            <li><a href="website-development.html">Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Address</h3>
+                        </div>
+                        <ul class="address-list">
+                            <li>No 10-I KNT Manickam Road, New bus stand, Krishnagiri-635001</li>
+                            <li><a href="tel:+916369406416">+91 63694-06416</a></li>
+                            <li><a href="mailto:info@forgeindiaconnect.com">info@forgeindiaconnect.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row copyright-content">
+                    <div class="col-md-6">
+                        <p>© <span id="current-year">2026</span> Forge India Connect Pvt Ltd. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6" style="text-align: right;">
+                        <p class="copyright-text"> Developed & Maintained By
+                            <a href="https://www.unntangle.com" class="footer-link" target="_blank"
+                                rel="noopener">Unntangle</a>
+                        </p>
+                    </div>
+
+                    <style>
+                        .footer-link {
+                            color: inherit;
+                            text-decoration: none;
+                            transition: color 0.3s ease, text-decoration 0.3s ease;
+                        }
+
+                        .footer-link:hover {
+                            color: #FFD700;
+                            /* change to your brand color */
+                            text-decoration: underline;
+                        }
+                    </style>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./ footer-section -->
+
+    <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+    <!--scrollup-->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquary-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+    <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/vendor/waypoints.min.js"></script>
+    <script src="assets/js/vendor/venobox.min.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <script src="assets/js/vendor/meanmenu.js"></script>
+    <script src="assets/js/vendor/jquery.isotope.js"></script>
+    <script src="assets/js/vendor/swiper.min.js"></script>
+    <script src="assets/js/vendor/split-type.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/scroll-trigger.min.js"></script>
+    <script src="assets/js/vendor/smooth-scroll.js"></script>
+    <script src="assets/js/vendor/jquery.carouselTicker.js"></script>
+    <script src="assets/js/vendor/nice-select.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script> if (window.location.pathname.endsWith('index.html')) { window.location.replace(window.location.origin + '/'); }
+    </script>
+</body>
+
+</html>

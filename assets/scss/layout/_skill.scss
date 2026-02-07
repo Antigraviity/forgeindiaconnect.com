@@ -1,0 +1,88 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Skill CSS
+----------------------------------------*/
+
+.skill-img{
+    height: 500px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.skill-content-wrap{
+    @include flex-vertical-center;
+    justify-content: space-between;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.skills-items{
+    max-width: 536px;
+    width: 100%;
+    @include breakpoint(lg){
+        margin-top: 20px;
+    }
+}
+
+.skills-item{
+    overflow: hidden;
+    &:not(:last-of-type){
+        margin-bottom: 25px;
+    }
+    .title{
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-transform: capitalize;
+        span{
+            padding: 0 10px;
+        }
+    }
+    .progress{
+        background-color: rgba(0, 46, 79, 0.1);
+        height: 10px;
+        overflow: visible;
+        border-radius: 0;
+        border-radius: 32px;
+        .progress-bar{
+            position: relative;
+            background-color: var(--cp-color-heading-primary);
+            overflow: visible;
+            border-radius: 32px;
+            span{
+                font-size: 16px;
+                font-weight: 500;
+                background-repeat: no-repeat;
+                color: var(--cp-color-heading-primary);
+                padding: 10px 10px 20px 10px;
+                position: absolute;
+                top: -45px;
+                right: -11px;
+                @include breakpoint(sm){
+                    font-size: 18px;
+                    padding-top: 20px;
+                    top: -60px;
+                }
+            }
+        }
+    }
+}
+
+// Skill Section
+
+.skill-img-2{
+    .img-overlay{
+        background-color: var(--cp-color-bg-2);
+    }
+}
+
+.skill-inner{
+    background-color: #F8F5F3;
+}
+
+/* !END: Skill CSS */

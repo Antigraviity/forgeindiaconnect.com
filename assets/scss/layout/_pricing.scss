@@ -1,0 +1,79 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Pricing CSS
+----------------------------------------*/
+
+.pricing-item{
+    background-color: #F8F5F3;
+    padding: 45px;
+    border-radius: 8px;
+    @include breakpoint(sm){
+        padding: 30px 20px;
+    }
+    .title{
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .pricing-offer{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .price{
+        font-family: "NewYork", sans-serif;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 1;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--cp-color-border-1);
+    }
+    .pricing-list{
+        list-style: none;
+        margin-bottom: 40px;
+        li{
+            @include flex-vertical-center;
+            line-height: 1;
+            &:not(:last-of-type){
+                margin-bottom: 20px;
+            }
+            i{
+                color: var(--cp-color-heading-primary);
+                width: 25px;
+            }
+            &.cross-icon{
+                i{
+                    color: var(--cp-color-heading-primary);
+                }
+            }
+        }
+    }
+    &.active{
+        background-color: var(--cp-color-bg-1);
+        .pricing-list{
+            li{
+                i{
+                    color: var(--cp-color-common-white);
+                }
+            }
+        }
+        .pricing-btn{
+            .cp-primary-btn{
+                &:hover{
+                    &:before{
+                        background-color: var(--cp-color-common-white);
+                    }
+                    .btn-text{
+                        .btn-text-2{
+                            color: var(--cp-color-heading-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* !END: Pricing CSS */

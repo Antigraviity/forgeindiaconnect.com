@@ -1,0 +1,44 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Content CSS
+----------------------------------------*/
+
+.content-section{
+    position: relative;
+    z-index: 1;
+}
+
+.content-info{
+    @include breakpoint(md){
+        margin-bottom: 30px;
+    }
+    p{
+        color: #F8F7F0;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        max-width: 480px;
+        width: 100%;
+        line-height: 1.6;
+        @include breakpoint(sm){
+            font-size: 18px;
+        }
+    }
+    .content-btn{
+        .cp-primary-btn{
+            &:hover{
+                &:before{
+                    background-color: var(--cp-color-common-white);
+                }
+                .btn-text{
+                    .btn-text-2{
+                        color: var(--cp-color-heading-primary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* !END: Content CSS */

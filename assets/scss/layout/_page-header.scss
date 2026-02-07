@@ -1,0 +1,90 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Page Header CSS
+----------------------------------------*/
+.page-header{
+    background-color: var(--cp-color-bg-1);
+    position: relative;
+    z-index: 1;
+    .page-header-content{
+        padding: 220px 0 120px 0;
+        position: relative;
+        z-index: 2;
+        @include breakpoint(md){
+            padding: 100px 0 100px 0;
+        }
+        .title{
+            font-family: var(--cp-ff-heading);
+            color: var(--cp-color-common-white);
+            font-size: 64px;
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 30px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            @include breakpoint(sm){
+                line-height: 1.3em;
+            }
+            @include breakpoint(md){
+                font-size: 48px;
+                line-height: 1;
+                margin-bottom: 20px;
+            }
+            @include breakpoint(sm){
+                font-size: 38px;
+                line-height: 1;
+                margin-bottom: 10px;
+            }
+            span{
+                font-family: "NewYork", sans-serif;
+                font-weight: 400;
+            }
+        }
+        .sub-title{
+            font-family: var(--cp-ff-heading);
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            @include breakpoint(sm){
+                font-size: 15px;
+            }
+            .home{
+                color: #FEFEFE;
+                position: relative;
+                padding-right: 20px;
+                margin-right: 10px;
+                &:hover{
+                    color: var(--cp-color-theme-primary);
+                }
+                &:before{
+                    background-image: none;
+                    font-family: "Font Awesome 6 Pro";
+                    font-size: 13px;
+                    font-weight: 700;
+                    content: "-";
+                    color: var(--cp-color-common-white);
+                    position: absolute;
+                    top: 60%;
+                    right: 3px;
+                    transform: translateY(-50%);
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+            a{
+                @include breakpoint(sm){
+                    line-height: 2;
+                }
+            }
+        }
+        .inner-page{
+            color: var(--cp-color-theme-primary);
+            cursor: inherit;
+        }
+    }
+}
+
+/* !END: Page Header CSS */
