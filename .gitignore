@@ -9,8 +9,6 @@ npm-debug.log
 yarn-error.log
 
 credentials.json
-virtual_card_counter.txt
-virtual_cards_log.txt
 *.zip
 connect/
 _ide_helper.php
